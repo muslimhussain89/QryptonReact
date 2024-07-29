@@ -1,0 +1,30 @@
+.ProjectSolution
+{
+    position: relative;
+    margin-bottom: 8rem;
+}
+.SliderImage
+{
+    width: 40%;
+}
+.ProjectSolutionSlider
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.SliderDetails
+{
+    width: 56%;
+}
+.SliderDetails p span,
+.SliderHeading p span
+{
+    font-weight: 700;
+}
+.SliderHeading
+{
+    position: absolute;
+    top: 0;
+    left: 44%;
+}

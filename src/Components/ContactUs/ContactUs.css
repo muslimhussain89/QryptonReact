@@ -1,0 +1,174 @@
+.contactForm
+{
+    padding: 2%;
+    width: 50%;
+    background-color: white;
+    height: 100%;
+    overflow: scroll;
+    float: right;
+}
+
+.contactForm form input,
+.contactForm form textarea,
+select {
+    display: block;
+    width: 96%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    padding: 35px 0px 10px 0px;
+    color: black;
+    padding-left: 15px;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contactForm form input:focus,
+.contactForm form textarea:focus {
+    background-color: transparent;
+}
+
+select:focus-visible {
+    outline: none !important;
+}
+
+
+.contactForm form input::placeholder,
+.contactForm form textarea::placeholder,
+select {
+    color: #5b5b5b !important;
+}
+
+.contactForm form textarea {
+    resize: none;
+}
+
+.contactForm form input:focus-visible,
+.contactForm form textarea:focus-visible {
+    outline: none !important;
+}
+
+.contactForm form .submit {
+    background: black;
+    padding: 2% 5.5%;
+    border-radius: 38px;
+    margin: 55px 0px;
+    cursor: pointer;
+    font-size: 2.6rem;
+    width: 214px;
+    transition: width 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contactForm form .submit:hover {
+    width: 264px;
+}
+
+
+.thankyou_message {
+    border-radius: 40px;
+    padding: 5px 15px 5px;
+    color: white;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    margin-top: 6rem;
+}
+
+.thankyou_message button {
+    border: none;
+    background: transparent;
+}
+
+.thankyou_message button svg {
+    height: 20px;
+    cursor: pointer;
+    fill: white;
+}
+
+.thankyou_message h1 {
+    color: white;
+    letter-spacing: 2px;
+}
+
+.loading-animation {
+    margin-top: 15px;
+}
+
+
+.press-effect {
+    cursor: pointer;
+    border-bottom: 4px solid #d9d9d9;
+    box-shadow: 0px 5px 10px #333;
+    -webkit-transition: all 0.3s;
+    transition: all 0.4s;
+    color: white;
+    font-size: 4rem;
+    border: none;
+}
+
+.press-effect:active {
+    box-shadow: 0px 4px 8px #333;
+    -webkit-transform: scale(0.78);
+    transform: scale(0.78);
+}
+
+.KatanaContactLogo
+{
+    width: 50%;
+}
+/* For Chrome, Safari, Edge, and Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.ContactCloseButton
+{
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+}
+
+@media screen and (max-width: 992px) 
+{
+    .contactForm form .submit {
+        padding: 6% 5.5%;
+    }
+}
+@media screen and (max-width: 480px) {
+
+    .officelocationAddress {
+        display: block !important;
+    }
+
+    .body .notifyBtn a,
+    .contactForm form .submit {
+        padding: 3% 3.5%;
+        width: 150px;
+    }
+
+    .body .notifyBtn a:hover,
+    .contactForm form .submit:hover {
+        width: 180px;
+    }
+
+    .contactForm form input,
+    .contactForm form textarea,
+    select {
+        font-size: 2.3rem !important;
+    }
+    .contactForm {
+        width: 80% !important;
+    }
+}

@@ -1,0 +1,23 @@
+.SolutionHead
+{
+    width: 50%;
+}
+.SolutionDetails
+{
+    display: flex;
+    justify-content: space-between;
+}
+.SolutionCol2,
+.SolutionCol1
+{
+    width: 48%;
+}
+.OurSolutionSection
+{
+    margin-bottom: 8rem;
+}
+.SolutionItem p span
+{
+    font-weight: 600;
+    margin-right: 10px;
+}

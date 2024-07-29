@@ -1,0 +1,13 @@
+.ProjectTwoColumnWrapper
+{
+    margin: 8rem 0rem;
+    display: flex;
+}
+.ProjectHeadCol1
+{
+    width: 40%;
+}
+.ProjectTextCol2
+{
+    width: 60%;
+}

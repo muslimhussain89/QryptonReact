@@ -1,0 +1,94 @@
+.QryptonNavbar
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    z-index: 1;
+    position: relative;
+}
+.QryptonLogo img
+{
+    width: 50%;
+}
+.QryptonNavbarLinks
+{
+    display: flex;
+    margin-right: 15rem;
+    padding-top: 1rem;
+}
+.QryptonNavbarLinks .QryptonButton
+{
+    margin: 0rem 3rem;
+}
+.QryptonNavbarLinks button
+{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0px !important;
+}
+
+
+
+.ContactUsWrapper.false
+{
+    display: none;
+}
+.ContactUsWrapper
+{
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000c2;
+    z-index: 9;
+    right: -100%;
+    position: absolute;
+}
+
+
+/* Apply the animation when the component is mounted */
+.activeContact {
+    animation: slideRight 0.8s forwards;
+    display: flex;
+    justify-content: end;
+}
+.inActiveContact
+{
+    animation: slideBack 0.8s forwards;
+}
+
+
+/* FOR THE GASOLINE TAB */
+@keyframes slideRight {
+    0% {
+        right: -100%;
+    }
+
+    70% {
+        right: 2%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+/* FOR THE GASOLINE TAB */
+@keyframes slideBack {
+    0% {
+        right: 0%;
+    }
+
+    20% {
+        right: 5%;
+    }
+
+    100% {
+        right: -102%;
+        display: none;
+    }
+}
+
+.no-scroll {
+    overflow: hidden !important;
+    height: 100vh;
+  }

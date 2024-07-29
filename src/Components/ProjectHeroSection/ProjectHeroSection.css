@@ -1,0 +1,50 @@
+.ProjectHeroSection
+{
+    margin-bottom: 18rem;
+    height: 62vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.ProjectHeroSectionText
+{
+    margin-bottom: 5rem;
+}
+.ProjectHeroSectionText p span,
+.ProjectAboutHeadingText p span
+{
+    font-weight: 700;
+    color: black;
+}
+
+.ProjectHeroSectionText p
+{
+     line-height: 1.2;
+     width: 60%;
+}
+
+.ProjectHeroSectionText p:nth-child(1)
+{
+    margin-right: 4px;
+}
+.ProjectHeroSectionTabs
+{
+    display: flex;
+    width: 950;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* Hide scrollbar for Chrome, Safari, and Opera */
+    scrollbar-width: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.ProjectHeroSectionTabs::-webkit-scrollbar {
+    display: none;
+}
+.ProjectHeroSectionTabs p
+{
+    padding: 0.6rem 2rem;
+    background-color:#ECECEC ;
+    border-radius: 12px;
+    margin-right: 2rem;
+    white-space: nowrap;
+}

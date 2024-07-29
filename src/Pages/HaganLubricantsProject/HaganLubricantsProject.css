@@ -1,0 +1,106 @@
+.ProjectPage {
+    padding: 2%;
+    margin-bottom: 6rem;
+}
+
+.ProjectVideo video,
+.ServiceVideo video {
+    width: 100%;
+}
+
+
+@media screen and (min-width: 1950px) {
+    .ProjectPage,
+    .ServicesPage {
+        padding: 2% 8%;
+    }
+}
+
+
+
+.SolutionHead {
+    width: 50%;
+}
+
+.SolutionDetails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.SolutionCol2,
+.SolutionCol1 {
+    width: 48%;
+}
+
+.OurSolutionSection {
+    margin-bottom: 8rem;
+}
+
+.SolutionItem p span {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+
+
+
+/*****************************************************
+********************* MEDIA QUERIES *****************
+********************************************************/
+
+/* ALL PROJECTS MEDIA QUERIES */
+
+/*****************************************************
+********************* 1180 *****************
+********************************************************/
+@media screen and (max-width: 1180px) {
+    .ProjectAboutImages img {
+        width: 100%;
+        ;
+    }
+}
+
+
+/*****************************************************
+********************* 768 *****************
+********************************************************/
+@media screen and (max-width: 768px) {
+    .ProjectHeroSectionTabs p {
+        padding: 2rem 2rem;
+    }
+}
+
+
+/*****************************************************
+********************* 576 *****************
+********************************************************/
+@media screen and (max-width: 576px) {
+    .ProjectHeroSectionText p,
+    .ProjectAboutHeadingText,
+    .ProjectTextCol2,
+    .SolutionHead,
+    .SolutionItem p {
+        width: 95% !important;
+    }
+    .ProjectTwoColumnWrapper
+    {
+        flex-direction: column;
+    }
+    .ProjectTextCol2
+    {
+        margin-top: 5rem;
+    }
+    .SolutionDetails
+    {
+        margin-top: 8rem;
+        flex-direction: column;
+    }
+    .SolutionCol2, .SolutionCol1
+    {
+        width: 100% !important;
+    }
+    .SolutionItem p
+    {
+        margin: 10rem 0rem !important;
+    }
+}

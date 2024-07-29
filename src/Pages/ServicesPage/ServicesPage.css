@@ -1,0 +1,243 @@
+.ServicesPage {
+    padding: 0 2.5rem;
+}
+
+.ServicesPageHero {
+    padding: 0rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    height: 76vh;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.ServicesPageHero h1 {
+    font-size: 8rem;
+    width: 50%;
+    line-height: 1;
+    margin: 0;
+    margin: 5rem 0;
+}
+
+.OurServices {
+    padding-bottom: 5rem;
+}
+
+.ServicesName {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 2rem;
+    column-gap: 5rem;
+}
+
+.ServiceName {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ServiceName span {
+    margin-right: 2rem;
+}
+
+.ServicesName a:nth-child(1),
+.ServicesName a:nth-child(5) {
+    border-top: 1px solid black;
+    padding-top: 2rem;
+}
+
+.ServicesName a {
+
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    font-size: 2.2rem;
+    padding-bottom: 2rem;
+    font-weight: 600;
+}
+
+.ServiceName svg {
+    width: 20px;
+    height: 20px;
+}
+
+.ServiceName svg path {
+    stroke: black;
+}
+
+/*************************************************
+******************** EACH SERVICES **************
+****************************************************/
+.EachService {
+    margin: 5rem 0rem;
+}
+
+.EachService h2 {
+    font-size: 10rem;
+    padding-top: 5rem;
+    margin: 0 !important;
+    border-top: 1px solid black;
+}
+
+.EachServiceBody {
+    margin-top: 10rem;
+}
+
+.ServicesDetails p:nth-child(1),
+.WeProvideNumber p:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    border-bottom: none;
+
+}
+
+.ServicesDetails p:nth-child(2) {
+    font-size: 3rem;
+}
+
+.EachServiceBody {
+    display: flex;
+}
+
+.ServicesDetails,
+.WeProvide {
+    width: 50%;
+}
+
+.ServicesDetails p:nth-child(2) {
+    width: 65%;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.WeProvideNumber p {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.WeProvideNumber p span {
+    margin-right: 2rem;
+    color: grey;
+}
+
+.WeProvideNumber p {
+    border-bottom: 1px solid grey;
+    padding: 15px;
+}
+
+.WeProvideNumber p:nth-child(2) {
+    border-top: 1px solid grey;
+}
+
+/* SLIDER */
+.EachServiceBody .swiper {
+    width: 100%;
+}
+
+.WeProvidedImages .swiper {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    height: 95vh;
+}
+
+.swiper-slide img {
+    width: 100% !important;
+}
+
+.WeProvidedImages {
+    padding: 0% 0%;
+}
+
+.ServiceVideo {
+    margin-top: 5rem;
+    height: 95vh;
+    overflow: hidden;
+}
+
+
+
+/****************MEDIA QUERIES************************************
+*****************MEDIA QUERIES***********************************
+*****************MEDIA QUERIES***********************************/
+
+/****************************************************
+************** MEDIA QUERY 1440 *********************
+******************************************************/
+
+@media (max-width: 1440px) {
+    .ServicesPageHero h1 {
+        font-size: 6rem;
+        width: 60%;
+    }
+}
+
+/****************************************************
+************** MEDIA QUERY 992 *********************
+******************************************************/
+
+@media (max-width: 992px) {
+    .ServicesPageHero h1 {
+        width: 70%;
+    }
+
+    .ServicesDetails p:nth-child(2) {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .ServicesDetails {
+        width: 80%;
+    }
+
+    .WeProvide {
+        width: 100%;
+    }
+
+    .EachServiceBody {
+        display: block;
+    }
+
+    .EachService h2 {
+        font-size: 8rem;
+    }
+
+    .swiper {
+        height: auto !important;
+    }
+}
+
+/****************************************************
+************** MEDIA QUERY 576 *********************
+******************************************************/
+
+@media (max-width: 576px) {
+    .ServicesPageHero h1 {
+        width: 100%;
+    }
+
+    .ServicesName {
+        grid-auto-flow: row;
+        grid-template-rows: autO;
+    }
+
+    .ServicesName a:nth-child(5) {
+        border-top: none;
+        padding-top: 0 !important;
+    }
+
+    .EachService h2 {
+        font-size: 6rem;
+        padding-top: 10rem;
+
+    }
+
+    .ServicesDetails {
+        width: 100%;
+    }
+
+    .WeProvideNumber p {
+        display: flex;
+    }
+}

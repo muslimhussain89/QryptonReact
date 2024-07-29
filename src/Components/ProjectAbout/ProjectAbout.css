@@ -1,0 +1,105 @@
+.ProjectAbout {
+    margin-top: 8rem;
+}
+
+.ProjectAboutHeadingText {
+    width: 45%;
+}
+
+.ProjectAboutHeadingText,
+.ProjectAboutImages,
+.ProjectAboutDetails {
+    margin-bottom: 8rem;
+}
+
+.ProjectAboutHeadingText p {
+    display: inline;
+}
+
+.ProjectAboutImages {
+    text-align: center;
+}
+
+.ProjectAboutImages img:nth-child(2) {
+    z-index: 2;
+    position: relative;
+}
+
+.PeojectFoundedWrapper,
+.ProjectIndustry,
+.ProjectScope {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: end;
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.ProjectScope {
+    border-bottom: 1px solid black;
+
+}
+
+.PeojectFoundedWrapper p:nth-child(1),
+.ProjectIndustry p:nth-child(1),
+.ProjectScope p:nth-child(1) {
+    width: 30%;
+}
+
+.PeojectFoundedWrapper p:nth-child(2),
+.ProjectIndustry p:nth-child(2),
+.ProjectScope p:nth-child(2) {
+    width: 15%;
+}
+
+/*****************************************************
+********************* MEDIA QUERIES *****************
+********************************************************/
+
+/*****************************************************
+********************* 1200px *****************
+********************************************************/
+@media screen and (max-width: 1200px) {
+
+    .PeojectFoundedWrapper p:nth-child(2),
+    .ProjectIndustry p:nth-child(2),
+    .ProjectScope p:nth-child(2) {
+        width: 20%;
+    }
+}
+
+/*****************************************************
+********************* 992px *****************
+********************************************************/
+@media screen and (max-width: 992px) {
+
+    .PeojectFoundedWrapper p:nth-child(2),
+    .ProjectIndustry p:nth-child(2),
+    .ProjectScope p:nth-child(2) {
+        width: 22%;
+    }
+}
+
+/*****************************************************
+********************* 576px *****************
+********************************************************/
+@media screen and (max-width: 576px) {
+
+    .PeojectFoundedWrapper p:nth-child(2),
+    .ProjectIndustry p:nth-child(2),
+    .ProjectScope p:nth-child(2) {
+        width: 30%;
+    }
+}
+
+/*****************************************************
+********************* 420px *****************
+********************************************************/
+@media screen and (max-width: 420px) {
+
+    .PeojectFoundedWrapper p:nth-child(2),
+    .ProjectIndustry p:nth-child(2),
+    .ProjectScope p:nth-child(2) {
+        width: 40%;
+    }
+}
+

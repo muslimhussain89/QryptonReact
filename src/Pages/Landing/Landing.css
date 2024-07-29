@@ -1,0 +1,339 @@
+/* HEADER VIDEO */
+.HeaderVideo {
+    height: 102vh;
+    overflow: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.HeaderVideo video {
+    object-fit: cover;
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+}
+.QryptonLandingPage
+{
+    position: relative;
+    z-index: 0;
+}
+.LandingSec2
+{
+    margin-top: max(30rem, 90vh);
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+
+
+/* WE BUILD DIGITAL PRODUCT */
+
+.DigitalProductPorfpolio {
+    margin: 0 auto;
+    padding: 10rem 6%;
+}
+
+.DigitalProductPorfpolio .digitalProductInner {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5rem;
+    row-gap: 8rem;
+}
+
+.digitalProductInner .digitalProductSec:nth-child(2),
+.digitalProductInner .digitalProductSec:nth-child(3) {
+    width: 85%;
+}
+
+.digitalProductInner .digitalProductSec:nth-child(1) p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+    text-transform: uppercase;
+}
+
+.digitalProductInner .digitalProductSec:nth-child(2) h1 {
+    margin: 0;
+    font-size: 5rem;
+    font-weight: bolder;
+    color: black;
+    word-break: keep-all;
+    line-height: 1.15;
+}
+
+.digitalProductInner .digitalProductSec:nth-child(2) p {
+    margin-top: 2rem;
+    font-size: 2rem;
+    width: 80%;
+    color: black;
+}
+
+.digitalProductInner .digitalProductSec:nth-child(3) h2 {
+    margin: 0;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: black;
+    line-height: 1.25;
+}
+
+.digitalProductInner .digitalProductSec:nth-child(4) {
+    display: flex;
+}
+
+.digitalProductInner .digitalProductSec .TotalWorksec1 p:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+}
+
+.digitalProductInner .digitalProductSec .TotalWorksec1 p:nth-child(2) {
+    font-size: 8rem;
+    font-weight: 800;
+    color: black;
+    font-family: 'Roboto', sans-serif !important;
+    margin-top: 2rem;
+}
+
+.digitalProductInner .digitalProductSec .TotalWorksec1 {
+    border-top: 1px solid #c4cede;
+    padding-top: 1rem;
+}
+
+.digitalProductInner .digitalProductSec .TotalWorksec1:nth-child(2) {
+    margin-left: 8rem;
+}
+
+
+/*****************************************************************************
+  ************************* OUR WORK / OUR PROJECTS ****************************
+  *****************************************************************************/
+
+.OurWorkSection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* First two columns take up 50% width each */
+    gap: 10px;
+    /* Adjust this according to your spacing preferences */
+}
+
+.OurWorkSection .EachWork {
+    margin-bottom: 10rem;
+}
+
+.OurWorkSection .EachWork a {
+    text-decoration: none;
+    color: black;
+}
+
+.OurWorkSection .EachWork .ProjectDetails {
+    width: 80%;
+    margin-top: 5rem;
+}
+
+.OurWorkSection .EachWork .ProjectDetails h1 {
+    font-size: 4.4rem !important;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.OurWorkSection .EachWork .ProjectName {
+    font-size: 2.8rem;
+    text-transform: capitalize;
+    margin-top: 5rem;
+}
+
+.OurWorkSection .EachWork .ProjectName span {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    margin-left: 2rem;
+
+}
+
+.OurWorkSection .EachWork:nth-child(1),
+.OurWorkSection .EachWork:nth-child(2) {
+    grid-column: span 1;
+    /* Each of the first two items spans one column */
+}
+
+.OurWorkSection .EachWork:nth-child(1) .ProjectVideo {
+    background-color: #e7e7e7;
+    height: 60vh;
+    display: flex;
+}
+
+.OurWorkSection .EachWork:nth-child(1) video {
+    width: 100%;
+}
+
+.OurWorkSection .EachWork:nth-child(1) .ProjectDetails,
+.OurWorkSection .EachWork:nth-child(1) .ProjectName,
+.OurWorkSection .EachWork:nth-child(4) .ProjectDetails,
+.OurWorkSection .EachWork:nth-child(4) .ProjectName {
+    margin-left: 6rem;
+}
+
+.OurWorkSection .EachWork:nth-child(2) img {
+    width: 70%;
+}
+
+.OurWorkSection .EachWork:nth-child(2) .ProjectImage {
+    background-color: #4b4a52;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.OurWorkSection .EachWork:nth-child(3) img,
+.OurWorkSection .EachWork:nth-child(4) img {
+    width: 100%;
+}
+
+.OurWorkSection .EachWork:nth-child(3) {
+    grid-column: span 2;
+    /* This item spans two columns */
+    width: 70%;
+    /* 70% width */
+    justify-self: end;
+    /* Right align */
+}
+
+.OurWorkSection .EachWork:nth-child(4) {
+    grid-column: span 2;
+    /* This item spans two columns */
+    width: 70%;
+    /* 70% width */
+    justify-self: start;
+    /* Left align */
+}
+
+.OurWorkSection .EachWork:nth-child(4) .ProjectImage {
+    background: #e3e5ed;
+
+}
+
+.OurWorkSection .EachWork:nth-child(5) {
+    grid-column: 1 / -1;
+    /* This item spans across all columns */
+    width: 90%;
+    /* 90% width */
+    justify-self: center;
+    /* Center align */
+}
+
+.OurWorkSection .EachWork:nth-child(5) video {
+    width: 100%;
+}
+
+
+
+
+/****************MEDIA QUERIES************************************
+*****************MEDIA QUERIES***********************************
+*****************MEDIA QUERIES***********************************/
+
+/****************************************************
+************** MEDIA QUERY 1200 *********************
+******************************************************/
+
+@media (max-width: 1200px) {
+    .HeaderVideo {
+        height: 88vh;
+    }
+    .LandingSec2 {
+        margin-top: 78vh;
+    }
+    
+}
+
+/****************************************************
+************** MEDIA QUERY 768 *********************
+******************************************************/
+
+@media (max-width: 768px) {
+    .HeaderVideo {
+        height: 68vh;
+    }
+    .LandingSec2 {
+        margin-top: 48vh;
+    }
+    .OurWorkSection .EachWork:nth-child(2) img {
+        width: 100%;
+    }
+}
+
+/****************************************************
+************** MEDIA QUERY 576 *********************
+******************************************************/
+
+@media (max-width: 576px) {
+
+    /******************* NAVBAR ***************/
+    .QryptonNavbar {
+        padding: 10px;
+        align-items: center;
+    }
+
+    .QryptonNavbarLinks {
+        display: flex;
+        margin-right: 1rem;
+    }
+
+    .QryptonLogo img {
+        width: 25%;
+    }
+
+    /******************* HEADER VIDEO ***********************/
+    .HeaderVideo {
+        height: 42vh;
+        position: relative;
+        margin-top: 25px;
+    }
+    .LandingSec2 {
+        margin-top: 0vh;
+    }
+    /********************* DIGITAL PRODUCT ****************************/
+    .DigitalProductPorfpolio .digitalProductInner {
+        grid-template-columns: auto;
+        row-gap: 8rem;
+    }
+
+    .digitalProductInner .digitalProductSec:nth-child(2),
+    .digitalProductInner .digitalProductSec:nth-child(3) {
+        width: 100%;
+    }
+
+    /************************ OUR WORK ************************/
+    .OurWorkSection .EachWork:nth-child(1),
+    .OurWorkSection .EachWork:nth-child(2) {
+        grid-column: span 2;
+    }
+
+    .OurWorkSection .EachWork:nth-child(2) .ProjectDetails,
+    .OurWorkSection .EachWork:nth-child(2) .ProjectName {
+        margin-left: 6rem;
+
+    }
+
+    .OurWorkSection .EachWork:nth-child(2) .ProjectImage {
+        height: auto;
+        padding: 25px;
+    }
+
+    .OurWorkSection .EachWork:nth-child(3),
+    .OurWorkSection .EachWork:nth-child(4) {
+        grid-column: span 2;
+        width: 92%;
+    }
+
+    .OurWorkSection .EachWork .ProjectDetails {
+        width: 90%;
+    }
+
+}
