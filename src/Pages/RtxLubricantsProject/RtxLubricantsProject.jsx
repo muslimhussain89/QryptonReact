@@ -1,9 +1,7 @@
-import React from "react";
 import ProjectHeroSection from "../../Components/ProjectHeroSection/ProjectHeroSection";
 import ProjectAbout from "../../Components/ProjectAbout/ProjectAbout";
 import ProjectTwoColumnWrapper from "../../Components/ProjectTwoColumnWrapper/ProjectTwoColumnWrapper";
 import ImageComp from "../../Components/ImageComp/ImageComp";
-import ProjectSolution from "../../Components/ProjectSolution/ProjectSolution";
 import OurSolutionSection from "../../Components/OurSolutionSection/OurSolutionSection";
 
 export default function RtxLubricantsProject() {

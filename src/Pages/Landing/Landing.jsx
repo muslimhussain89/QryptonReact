@@ -1,6 +1,4 @@
-import React from "react";
 import "./Landing.css";
-import { Link } from "react-router-dom";
 
 const ourwork = [
   {
@@ -102,8 +100,8 @@ export default function Landing() {
          *********************OUR PROJECTS / OUR WORKS *************************************
          ***********************************************************************************/}
         <div className="OurWorkSection">
-          {ourwork.map((project) => (
-            <div className="EachWork">
+          {ourwork.map((project, index) => (
+            <div className="EachWork" key={index}>
               <a href={project.ProjectLink} target="_blank">
                 {project.ProjectVideo ? (
                   <div className="ProjectVideo">

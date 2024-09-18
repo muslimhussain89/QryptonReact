@@ -1,5 +1,5 @@
-import React from 'react'
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 
 /***
  * @author Muslim
@@ -17,12 +17,12 @@ import styled from "styled-components";
 
 export default function ImageComp({Src, Width, Height, Border, Radius, Margin, Padding}) {
     const Image  = styled.img`
-    width: ${(img) => (Width ? Width : "auto")};
-    height: ${(img) => (Height ? Height : "auto")};
-    border: ${(img) => (Border ? Border : "none")};
-    border-radius: ${(img) => (Radius ? Radius : "0")};
-    margin: ${(img) => (Margin ? Margin : "0")};
-    padding: ${(img) => (Padding ? Padding : "0")};
+    width: ${(Width ? Width : "auto")};
+    height: ${(Height ? Height : "auto")};
+    border: ${(Border ? Border : "none")};
+    border-radius: ${(Radius ? Radius : "0")};
+    margin: ${(Margin ? Margin : "0")};
+    padding: ${(Padding ? Padding : "0")};
     `;
 
   return (
@@ -30,3 +30,15 @@ export default function ImageComp({Src, Width, Height, Border, Radius, Margin, P
         <Image src={Src}  alt='image' />
   )
 }
+
+
+// Define prop types
+ImageComp.propTypes = {
+  Height: PropTypes.string,
+  Src: PropTypes.string,
+  Border: PropTypes.string,
+  Margin: PropTypes.string,
+  Padding: PropTypes.string,
+  Radius: PropTypes.string,
+  Width: PropTypes.string,
+};
