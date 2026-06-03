@@ -19,7 +19,10 @@
 .ProjectAboutImages {
     text-align: center;
 }
-
+.ProjectAboutImages img
+{
+    display: inline !important;
+}
 .ProjectAboutImages img:nth-child(2) {
     z-index: 2;
     position: relative;

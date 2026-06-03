@@ -34,7 +34,7 @@ export default function MyButton({
     background: ${ (BGcolor ? BGcolor : "transparent")};
     font-size: ${ (FontSize ? FontSize : "2rem")};
     font-weight: ${ (FontWeight ? FontWeight : "300")};
-    font-family: ${FontFamily ? FontFamily : "'Titillium Web', sans-serif"};
+    ${'' /* font-family: ${FontFamily ? FontFamily : "'Titillium Web', sans-serif"}; */}
     border: ${ (Border ? Border : "none")};
     padding: ${ (Padding ? Padding : "0")};
     margin: ${ (Margin ? Margin : "0")};

@@ -1,0 +1,34 @@
+.mask-bottom-fade {
+  -webkit-mask-image: linear-gradient(to top, transparent, black 40%);
+  mask-image: linear-gradient(to top, transparent, black 40%);
+}
+.LandingContactUs .contactForm
+{
+width: 100%;
+float: none;
+padding: 0%;
+}
+.LandingContactUs .contactForm form .submit
+{
+margin: 25px 0px 0px 0px;
+}
+.LandingContactUs .contactForm .KatanaContactLogo
+{
+display: none;
+}
+.LandingContactUs .contactForm .press-effect
+{
+box-shadow: none;
+}
+.LandingContactUs .contactForm form input, .LandingContactUs .contactForm form textarea
+{
+font-size: 1.5rem;
+}
+.contactForm form .submit {
+  font-size: 2.4rem;
+}
+.LandingContactUs .meeting-btn,
+.LandingContactUs .contactForm .divider-container
+{
+  display: none !important;
+}

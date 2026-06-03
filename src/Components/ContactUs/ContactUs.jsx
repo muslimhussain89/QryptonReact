@@ -108,7 +108,7 @@ export default function ContactUs() {
         xhr.open("POST", url);
         xhr.setRequestHeader(
           "Content-Type",
-          "application/x-www-form-urlencoded"
+          "application/x-www-form-urlencoded",
         );
         xhr.onreadystatechange = function () {
           // console.log(xhr.status, xhr.statusText);
@@ -147,56 +147,84 @@ export default function ContactUs() {
         data-email="muslimhussain89@gmail.com"
         action="https://script.google.com/macros/s/AKfycbygt4qKkhWf6FTwVvslT0qvk2MMRG22U9anRJ4J3-u9S6puCSbwJRDsGk9VRztShqdR/exec"
       >
-        <input type="text" name="Name" placeholder="Name" required />
-        <input type="email" name="Email" placeholder="Email" required />
-        <input type="number" name="Mobile" placeholder="Phone Number" required  />
-        <textarea
-          name="Message"
-          cols="10"
-          rows="1"
-          placeholder="What would you like to discuss.?"
-          required
-        ></textarea>
-        {loading ? (
-          <div className="loading-animation">
-            <RotatingLines
-              strokeColor="grey"
-              strokeWidth="5"
-              animationDuration="0.75"
-              width="76"
-              visible={true}
-            />
-          </div>
-        ) : success ? (
-          <div className="thankyou_message">
-            <h1>Thanks for contacting us!</h1>
-            <div className="close-btn">
-              <button onClick={() => window.location.reload()}>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                  <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-                </svg>
-              </button>
+        <div className="formWrapper">
+          <input type="text" name="Name" placeholder="Name" required />
+          <input type="email" name="Email" placeholder="Email" required />
+          <input
+            type="number"
+            name="Mobile"
+            placeholder="Phone Number"
+            required
+          />
+          <textarea
+            name="Message"
+            cols="10"
+            rows="1"
+            placeholder="What would you like to discuss.?"
+            required
+          ></textarea>
+        </div>
+
+        <div className="flex flex-col contactFormButtons">
+          {loading ? (
+            <div className="loading-animation">
+              <RotatingLines
+                strokeColor="grey"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="76"
+                visible={true}
+              />
             </div>
-          </div>
-        ) : (
-          <button className="submit press-effect">send</button>
-        )}
+          ) : success ? (
+            <div className="thankyou_message">
+              <h1>Thanks for contacting us!</h1>
+              <div className="close-btn">
+                <button onClick={() => window.location.reload()}>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          ) : (
+            <>
+              <button className="submit press-effect">Send</button>
+
+              {/* --- THE DIVIDER --- */}
+              <div className="divider-container">
+                <span className="divider-line"></span>
+                <span className="divider-text">or</span>
+                <span className="divider-line"></span>
+              </div>
+            </>
+          )}
+          <button className="submit press-effect meeting-btn bg-[#E4E4E4]">
+            <a
+              className="whitespace-nowrap"
+              href="https://cal.com/shahrozqrypton/30min"
+              target="blank"
+            >
+              Book a metting
+            </a>
+          </button>
+        </div>
       </form>
     );
   }
 
   return (
-        <div className="contactForm">
-          <div className="KatanaContactLogo">
-            <MyButton
-              Src={"./Images/Qrypton-logo.png"}
-              RouteLink={"/"}
-              ImgWidth={"100%"}
-              Width={"15%"}   
-              Margin={"0px 0px 5rem 0px"}         
-              />
-          </div>
-          <ContactForm />
-        </div>
+    <div className="contactForm">
+      <div className="KatanaContactLogo">
+        <MyButton
+          Src={"./Images/Qrypton-logo.webp"}
+          RouteLink={"/"}
+          ImgWidth={"100%"}
+          Width={"15%"}
+          Margin={"0px 0px 5rem 0px"}
+        />
+      </div>
+      <ContactForm />
+    </div>
   );
 }

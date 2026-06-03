@@ -1,22 +1,24 @@
 .ServicesPage {
     padding: 0 2.5rem;
+    margin-top: 70px;
 }
 
 .ServicesPageHero {
     padding: 0rem 0rem 0rem 0rem;
     display: flex;
     flex-direction: column;
-    height: 76vh;
+    /* height: 76vh; */
     overflow: hidden;
     justify-content: space-between;
 }
 
 .ServicesPageHero h1 {
-    font-size: 8rem;
+    font-size: 6.5rem;
     width: 50%;
     line-height: 1;
     margin: 0;
     margin: 5rem 0;
+    font-weight: 700;
 }
 
 .OurServices {
@@ -27,7 +29,6 @@
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: auto auto auto auto;
-    row-gap: 2rem;
     column-gap: 5rem;
 }
 
@@ -35,16 +36,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 8px;
 }
 
 .ServiceName span {
     margin-right: 2rem;
 }
 
+.ServicesName a {
+    padding-top: 2rem;
+}
 .ServicesName a:nth-child(1),
 .ServicesName a:nth-child(5) {
     border-top: 1px solid black;
-    padding-top: 2rem;
 }
 
 .ServicesName a {
@@ -52,11 +56,16 @@
     color: black;
     text-decoration: none;
     border-bottom: 1px solid black;
-    font-size: 2.2rem;
+    font-size: 2rem;
     padding-bottom: 2rem;
     font-weight: 600;
 }
+.ServicesName a:hover,
+.WeProvideNumber p:hover
+{
+    background-color: #e5e4e4;
 
+}
 .ServiceName svg {
     width: 20px;
     height: 20px;
@@ -74,10 +83,13 @@
 }
 
 .EachService h2 {
-    font-size: 10rem;
-    padding-top: 5rem;
+    font-size: 7.5rem;
+    padding-top: 2.5rem;
     margin: 0 !important;
     border-top: 1px solid black;
+    font-weight: 600;
+    background-color: #e7e7e7;
+    padding-left: 15px;
 }
 
 .EachServiceBody {
@@ -90,11 +102,9 @@
     font-weight: 600;
     margin-bottom: 4rem;
     border-bottom: none;
-
 }
-
-.ServicesDetails p:nth-child(2) {
-    font-size: 3rem;
+.WeProvideNumber p:nth-child(1):hover {
+    background-color: transparent;
 }
 
 .EachServiceBody {
@@ -109,11 +119,11 @@
 .ServicesDetails p:nth-child(2) {
     width: 65%;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3.5rem;
 }
 
 .WeProvideNumber p {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 600;
 }
 
@@ -142,7 +152,8 @@
     height: 95vh;
 }
 
-.swiper-slide img {
+.ProjectSolution .swiper-slide img,
+.WeProvidedImages .swiper-slide img {
     width: 100% !important;
 }
 
@@ -155,6 +166,50 @@
     height: 95vh;
     overflow: hidden;
 }
+
+
+
+
+
+.magnifier-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.magnifier-container {
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    user-select: none;
+    color: white;
+}
+
+.magnifier {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    background: black;
+    display: none;
+}
+
+.magnifier-wrapper:hover .magnifier {
+    display: block;
+}
+
+.magnifier span {
+    position: absolute;
+    font-size: 5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
 
 
 
@@ -180,11 +235,13 @@
 @media (max-width: 992px) {
     .ServicesPageHero h1 {
         width: 70%;
+        font-size: 5rem;
     }
 
     .ServicesDetails p:nth-child(2) {
         width: 100%;
         margin-bottom: 4rem;
+        font-size: 2.5rem;
     }
 
     .ServicesDetails {
@@ -200,7 +257,7 @@
     }
 
     .EachService h2 {
-        font-size: 8rem;
+        font-size: 6.5rem;
     }
 
     .swiper {
@@ -215,6 +272,7 @@
 @media (max-width: 576px) {
     .ServicesPageHero h1 {
         width: 100%;
+        font-size: 4.2rem;
     }
 
     .ServicesName {
@@ -228,7 +286,7 @@
     }
 
     .EachService h2 {
-        font-size: 6rem;
+        font-size: 4rem;
         padding-top: 10rem;
 
     }
@@ -239,5 +297,32 @@
 
     .WeProvideNumber p {
         display: flex;
+    }
+
+    .ServicesName a,
+    .WeProvideNumber p {
+        font-size: 1.8rem;
+    }
+
+
+
+
+
+
+    .EachService h2 {
+        padding-top: 6rem;
+    }
+
+    .EachServiceBody {
+        margin-top: 6rem;
+    }
+
+    .WeProvidedImages .swiper {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+
+    .EachService {
+        margin: 7.5rem 0rem;
     }
 }

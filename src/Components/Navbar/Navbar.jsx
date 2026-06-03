@@ -1,53 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react"; // Added useState
 import MyButton from "../Button/Button";
 import "./Navbar.css";
 import ContactUs from "../ContactUs/ContactUs";
-import { useState } from "react";
-import { useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
 
+export default function Navbar({
+  handleContactToggle,
+  touchButtonClicked,
+  activeContact,
+  isScrollDisabled,
+}) {
+  const [scrollDir, setScrollDir] = useState("at-top");
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      
+      if (scrollY <= 0) {
+        setScrollDir("at-top");
+      } else if (scrollY > 800) {
+        setScrollDir("sticky");
+      } else {
+        setScrollDir("hidden");
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-export default function Navbar() {
-
-  const [touchButtonClicked, setTouchButtonClicked] = useState(false);
-  const [activeContact, setActiveContact] = useState(false);
-  const [isScrollDisabled, setIsScrollDisabled] = useState(false);
-
-
-
-
-  const handleContactToggle = () => {
-    setIsScrollDisabled(!isScrollDisabled);
-    setActiveContact(!activeContact);
-    setTouchButtonClicked(true);
-    setActiveButton(false);
-
+  // Determine class based on state
+  const getNavClass = () => {
+    if (scrollDir === "at-top") return "is-at-top";
+    if (scrollDir === "sticky") return "sticky-nav";
+    return ""; // hidden (transform -100% applies)
   };
-  
-    if (isScrollDisabled) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
-
 
   return (
-    <div className="QryptonNavbar">
+    <div 
+      id="home" 
+      className={`QryptonNavbar px-6 py-5 ${getNavClass()}`}
+    >
+      {/* ... rest of your code stays the same ... */}
       <div className="QryptonLogo">
-        <MyButton Src={"./Images/Qrypton-logo.png"} RouteLink={"/"} />
+        <MyButton text={"Qrypton"} FontWeight={"500"} RouteLink={"/"} FontSize={"3rem"} />
       </div>
       <div className="QryptonNavbarLinks">
-          <MyButton
-            text={"services"}
-            RouteLink={"/services"}
-            />
-            <MyButton
-            text={"contact us"}
-            handleClick={handleContactToggle}
-            />
-
+        <MyButton text={"services"} RouteLink={"/services"} />
+        <HashLink smooth to="/#pricing">pricing</HashLink>
+        <MyButton text={"contact us"} handleClick={handleContactToggle} />
       </div>
+      
       {/* CONTACT US SECTION */}
       <div
         className={`ContactUsWrapper ${
@@ -58,7 +61,7 @@ export default function Navbar() {
         <ContactUs />
         <div className="ContactCloseButton">
           <MyButton
-          Src={"./Images/DesktopMenuCloseButton.svg"}
+            Src={"./Images/DesktopMenuCloseButton.svg"}
             TextTransform={"uppercase"}
             FontWeight={"400"}
             Color={"black"}
@@ -67,6 +70,6 @@ export default function Navbar() {
           />
         </div>
       </div>
-      </div>
+    </div>
   );
 }

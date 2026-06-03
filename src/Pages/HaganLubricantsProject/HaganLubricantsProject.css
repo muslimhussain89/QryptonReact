@@ -56,8 +56,10 @@
 @media screen and (max-width: 1180px) {
     .ProjectAboutImages img {
         width: 100%;
-        ;
     }
+    .ProjectHeroSectionText p {
+    width: 85%;
+}
 }
 
 
@@ -67,6 +69,10 @@
 @media screen and (max-width: 768px) {
     .ProjectHeroSectionTabs p {
         padding: 2rem 2rem;
+    }
+    .ProjectHeroSectionText p
+    {
+        font-size: 5.5rem !important;
     }
 }
 
@@ -103,4 +109,24 @@
     {
         margin: 10rem 0rem !important;
     }
+    
+    .ProjectHeadCol1 {
+    width: 50% !important;
+}
+.ProjectAboutHeadingText p
+{
+    font-size: 3rem !important;
+}
+.ProjectTextCol2 p,
+.SolutionHead p:nth-child(2),
+.SolutionItem p
+{
+    font-size: 2.2rem !important;
+}
+.ProjectHeroSectionTabs p
+{
+    font-size: 2rem !important;
+}
+
+    
 }

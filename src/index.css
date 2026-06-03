@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* Explicitly tell Tailwind where your files are */
+@source "../index.html";
+@source "./**/*.{js,ts,jsx,tsx}";
+
+
+
+
+/* GENERAL CSS  */
+@keyframes headerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-animate {
+  animation: headerFadeUp 0.8s ease-out forwards;
+}
+
+@keyframes headerFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header-animate-left {
+  animation: headerFadeLeft 0.8s ease-out forwards;
+}
+
+/**************************************
+**************** CURSOR  **************
+****************************************/
+
+#cursor {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: red;
+      pointer-events: none;
+      z-index: 9999;
+}
+
+#circle {
+      position: fixed;
+      width: 36px;
+      height: 36px;
+      border: 2px solid black;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9998;
+      transition: transform 0.15s ease;
+}
+
+.ripple {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: red;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      animation: rippleAnim 0.6s ease-out forwards;
+      z-index: 9997;
+}
+
+@keyframes rippleAnim {
+      from {
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 0.8;
+      }
+
+      to {
+            transform: translate(-50%, -50%) scale(4);
+            opacity: 0;
+      }
+}
+
+/**************************************
+**************** CURSOR  **************
+****************************************/

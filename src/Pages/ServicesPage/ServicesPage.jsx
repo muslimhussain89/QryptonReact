@@ -1,17 +1,64 @@
-import React from "react";
 import "./ServicesPage.css";
-import { Link } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
 import { HashLink } from "react-router-hash-link";
+import SeoHelmet from "../../Components/SeoHelmet/SeoHelmet";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 // import required modules
 import { Autoplay } from "swiper/modules";
-
 import "./ServicesPage.css";
+import { useAos } from "../../hooks/useAos";
+import BlurOnScroll from "../../NewComponents/BlurOnScroll";
+
+
+
+function Typewriter({ text, speed = 50 }) {
+  const [displayText, setDisplayText] = useState("");
+  const containerRef = useRef(null);
+  const lastScrollY = useRef(window.scrollY);
+
+  useEffect(() => {
+    const element = containerRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const currentScrollY = window.scrollY;
+        const isScrollingDown = currentScrollY > lastScrollY.current;
+
+        if (entry.isIntersecting && isScrollingDown) {
+          setDisplayText("");
+
+          let current = 0;
+
+          const interval = setInterval(() => {
+            current++;
+
+            setDisplayText(text.slice(0, current));
+
+            if (current >= text.length) {
+              clearInterval(interval);
+            }
+          }, speed);
+        }
+
+        lastScrollY.current = currentScrollY;
+      },
+      {
+        threshold: 0.25,
+      }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [text, speed]);
+
+  return <p ref={containerRef}>{displayText}</p>;
+}
 
 export default function ServicesPage() {
   const services = [
@@ -80,9 +127,9 @@ export default function ServicesPage() {
         },
       ],
       ProductImages: [
-        { Image: "./Images/ServicesPage/product_design-1.jpg" },
-        { Image: "./Images/ServicesPage/product_design-2.jpg" },
-        { Image: "./Images/ServicesPage/product_design-3.jpg" },
+        { Image: "./Images/ServicesPage/product_design-1.webp" },
+        { Image: "./Images/ServicesPage/product_design-2.webp" },
+        { Image: "./Images/ServicesPage/product_design-3.webp" },
       ],
     },
     // PRODUCT DISCOVERY
@@ -119,10 +166,9 @@ export default function ServicesPage() {
         },
       ],
       ProductImages: [
-        { Image: "./Images/ServicesPage/lowtoHi.jpg" },
-        { Image: "./Images/ServicesPage/web_detail.jpg" },
-        { Image: "./Images/ServicesPage/lowtoHi.jpg" },
-
+        { Image: "./Images/ServicesPage/lowtoHi.webp" },
+        { Image: "./Images/ServicesPage/web_detail.webp" },
+        { Image: "./Images/ServicesPage/lowtoHi.webp" },
       ],
     },
     // WEB DESIGN
@@ -155,9 +201,9 @@ export default function ServicesPage() {
         },
       ],
       ProductImages: [
-        { Image: "./Images/ServicesPage/web_design-1.jpg" },
-        { Image: "./Images/ServicesPage/web_design-2.jpg" },
-        { Image: "./Images/ServicesPage/web_design-3.jpg" },
+        { Image: "./Images/ServicesPage/web_design-1.webp" },
+        { Image: "./Images/ServicesPage/web_design-2.webp" },
+        { Image: "./Images/ServicesPage/web_design-3.webp" },
       ],
     },
     // Webflow Development
@@ -198,9 +244,9 @@ export default function ServicesPage() {
         },
       ],
       ProductImages: [
-        { Image: "./Images/OurWorkImages/webFlow-1.jpg" },
-        { Image: "./Images/OurWorkImages/webFlow-2.jpg" },
-        { Image: "./Images/OurWorkImages/webFlow-1.jpg" },
+        { Image: "./Images/OurWorkImages/webFlow-1.webp" },
+        { Image: "./Images/OurWorkImages/webFlow-2.webp" },
+        { Image: "./Images/OurWorkImages/webFlow-1.webp" },
       ],
     },
 
@@ -238,9 +284,9 @@ export default function ServicesPage() {
         },
       ],
       ProductImages: [
-        { Image: "./Images/OurWorkImages/Cosmetics Packaging.jpg" },
-        { Image: "./Images/OurWorkImages/spantiq_brand.jpg" },
-        { Image: "./Images/OurWorkImages/seekho_wcar.jpg" },
+        { Image: "./Images/OurWorkImages/Cosmetics Packaging.webp" },
+        { Image: "./Images/OurWorkImages/spantiq_brand.webp" },
+        { Image: "./Images/OurWorkImages/seekho_wcar.webp" },
       ],
     },
 
@@ -278,9 +324,9 @@ export default function ServicesPage() {
         },
       ],
       ProductImages: [
-        { Image: "./Images/ServicesPage/marketing_design-1.jpg" },
-        { Image: "./Images/ServicesPage/marketing_design-2.jpg" },
-        { Image: "./Images/ServicesPage/marketing_design-3.jpg" },
+        { Image: "./Images/ServicesPage/marketing_design-1.webp" },
+        { Image: "./Images/ServicesPage/marketing_design-2.webp" },
+        { Image: "./Images/ServicesPage/marketing_design-3.webp" },
       ],
     },
 
@@ -324,25 +370,34 @@ export default function ServicesPage() {
       ],
       // ServiceVideo:"./Videos/Mobile App.mp4"
       ProductImages: [
-        { Image: "./Images/ServicesPage/software_dev-1.jpg" },
-        { Image: "./Images/ServicesPage/software_dev-2.jpg" },
-        { Image: "./Images/ServicesPage/software_dev-3.jpg" },
+        { Image: "./Images/ServicesPage/software_dev-1.webp" },
+        { Image: "./Images/ServicesPage/software_dev-2.webp" },
+        { Image: "./Images/ServicesPage/software_dev-3.webp" },
       ],
     },
   ];
+
+  useAos({ duration: 400 });
   return (
     <div className="ServicesPage">
       {/*********************************************************************
        *************** SERVICES HERO SECTION *****************************
        ***********************************************************************/}
       <div className="ServicesPageHero">
+        <SeoHelmet
+          title="Our Services | Qrypton"
+          description="We plan, design, and market digital products: product design, web design, Webflow, branding, marketing design, and software development."
+          path="/services"
+          image="/Images/ServicesPage/software_dev-3.webp"
+          imageAlt="Qrypton services"
+        />
         <h1>
           At QRYPTON we plan, design and market delightful digital products.
         </h1>
         <div className="OurServices">
           <div className="ServicesName">
             {services.map((item, index) => (
-              <HashLink smooth to={`#${item.ServiceId}`}>
+              <HashLink smooth to={`#${item.ServiceId}`} key={index}>
                 <div className="ServiceName">
                   <p>
                     <span>{item.ServiceNumber}</span>
@@ -380,20 +435,26 @@ export default function ServicesPage() {
        ***********************************************************************/}
       <div className="EachServiceSec">
         {WeProvide.map((items, index) => (
-          <div className={items.className} id={items.Serviceid}>
+          <div className={items.className} id={items.Serviceid} key={index}>
             <div className="EachService">
-              <h2>{items.ServiceHeading}</h2>
+              <BlurOnScroll>
+                <h2>{items.ServiceHeading}</h2>
+              </BlurOnScroll>
               <div className="EachServiceBody">
                 <div className="ServicesDetails">
                   <p>BENEFIT</p>
-                  <p>{items.Details}</p>
+                  <Typewriter text={items.Details} />
                 </div>
                 <div className="WeProvide">
                   <div className="WeProvideNumber">
                     <p>services</p>
                     {items.ServiceList.map((service, idx) => (
-                      <p key={idx}>
-                        <span>{service.ServiceCount}</span>{" "}
+                      <p
+                        key={idx}
+                        data-aos="fade-up"
+                        data-aos-delay={String(idx * 100)}
+                      >
+                        <span>{service.ServiceCount}</span>
                         {service.ServiceName}
                       </p>
                     ))}
@@ -418,7 +479,7 @@ export default function ServicesPage() {
                   >
                     <div>
                       {items.ProductImages.map((serviceImg, idx) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={idx}>
                           <img src={serviceImg.Image} alt="" />
                         </SwiperSlide>
                       ))}

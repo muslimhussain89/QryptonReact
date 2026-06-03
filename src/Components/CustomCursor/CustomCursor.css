@@ -1,0 +1,38 @@
+/* Ensure default cursor remains visible */
+body {
+    cursor: auto;
+  }
+  
+  /* Custom cursor styling */
+  .custom-cursor {
+    position: fixed; /* Fixed positioning to align with viewport */
+    pointer-events: none; /* Allow interactions with underlying elements */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    z-index: 9999;
+  
+    /* Center the custom cursor */
+    transform: translate(-50%, -50%);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    opacity: 0; /* Start hidden */
+    visibility: hidden;
+  }
+  
+  /* Show the custom cursor on link hover */
+  .custom-cursor.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Hide the default cursor only on link hover */
+  .EachWork a:hover {
+    cursor: none;
+  }
+  

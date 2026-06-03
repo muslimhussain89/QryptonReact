@@ -1,10 +1,9 @@
-.contactForm
-{
+.contactForm {
     padding: 2%;
     width: 50%;
     background-color: white;
     height: 100%;
-    overflow: scroll;
+    overflow: auto;
     float: right;
 }
 
@@ -47,20 +46,57 @@ select {
 .contactForm form textarea:focus-visible {
     outline: none !important;
 }
-
-.contactForm form .submit {
+.contactFormButtons
+{
+    margin-top: 50px;
+}
+.contactForm form .submit,
+.landingbookmeeting  {
     background: black;
-    padding: 2% 5.5%;
     border-radius: 38px;
-    margin: 55px 0px;
     cursor: pointer;
-    font-size: 2.6rem;
-    width: 214px;
+    font-size: 2rem;
+    width: 288px;
     transition: width 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    height: 55px;
+}
+.landingbookmeeting 
+{
+    background-color: white;
+    white-space: nowrap;
+    color: black;
+    transition: width 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) !important;
+}
+.landingbookmeeting a
+{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    width: 100%;
+    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactForm form .submit.meeting-btn 
+{
+    background-color: #E4E4E4;
+    color: black;
+    outlinE: 1PX solid #AFAFAF;
+}
+.contactForm form .submit.meeting-btn a {
+    width: 100%;
+    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.contactForm form .submit:hover {
-    width: 264px;
+.contactForm form .submit:hover,
+.landingbookmeeting:hover {
+    width: 338px;
 }
 
 
@@ -103,11 +139,11 @@ select {
 .press-effect {
     cursor: pointer;
     border-bottom: 4px solid #d9d9d9;
-    box-shadow: 0px 5px 10px #333;
+    /* box-shadow: 0px 5px 10px #333; */
     -webkit-transition: all 0.3s;
     transition: all 0.4s;
     color: white;
-    font-size: 4rem;
+    /* font-size: 4rem; */
     border: none;
 }
 
@@ -117,35 +153,44 @@ select {
     transform: scale(0.78);
 }
 
-.KatanaContactLogo
-{
+.KatanaContactLogo {
     width: 50%;
 }
+
 /* For Chrome, Safari, Edge, and Opera */
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* For Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
-.ContactCloseButton
-{
+.ContactCloseButton {
     position: absolute;
     top: 5rem;
     right: 5rem;
 }
 
-@media screen and (max-width: 992px) 
-{
-    .contactForm form .submit {
-        padding: 6% 5.5%;
+@media screen and (max-width: 992px) {
+
+    .contactForm {
+        width: 85%;
     }
 }
+@media screen and (max-width: 768px) {
+
+    /* .contactForm form .submit,
+    .landingbookmeeting  {
+    width: 160px;
+    } */
+}
+
+
+
 @media screen and (max-width: 480px) {
 
     .officelocationAddress {
@@ -153,22 +198,90 @@ input[type=number] {
     }
 
     .body .notifyBtn a,
-    .contactForm form .submit {
-        padding: 3% 3.5%;
-        width: 150px;
+    .contactForm form .submit,
+    .divider-container {
+        width: 250px !important;
     }
 
     .body .notifyBtn a:hover,
     .contactForm form .submit:hover {
-        width: 180px;
+        width: 150px;
     }
 
     .contactForm form input,
     .contactForm form textarea,
     select {
-        font-size: 2.3rem !important;
+        font-size: 2rem !important;
     }
+
     .contactForm {
-        width: 80% !important;
+        width: 95% !important;
     }
+
+    .LandingContactUs .contactForm {
+        width: 100% !important;
+        padding: 0%;
+    }
+
+    .LandingContactUs .contactForm form textarea,
+    .LandingContactUs .contactForm form input {
+        font-size: 1.6rem !important;
+    }
+
+    
+
+    .contactForm form .contactFormButtons .submit:nth-child(1) {
+        margin-bottom: 0px;
+    }
+    .contactForm form .submit.meeting-btn
+    {
+        margin-left: 10px !important;
+    }
+    .contactForm form .submit.meeting-btn a
+    {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .contactFormButtons {
+        flex-direction: column !important;
+    }
+    .contactForm form .submit.meeting-btn {
+        margin-left: 0px !important;
+    }
+    .contactForm form .submit,.divider-container,.landingbookmeeting  {
+        width: 100% !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Divider Styling */
+.divider-container {
+    display: flex;
+    align-items: center;
+    width: 288px;
+    margin: 15px 0;
+}
+
+.divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #e0e0e0; /* Light gray line */
+}
+
+.divider-text {
+    padding: 0 15px;
+    color: #888;
+    font-size: 1.4rem; /* Adjust based on your UI scale */
+    text-transform: lowercase;
+    font-weight: 400;
 }

@@ -1,0 +1,6 @@
+# Qrypton Design Studio — https://qrypton.com
+
+User-agent: *
+Disallow:
+
+Sitemap: https://qrypton.com/sitemap.xml
