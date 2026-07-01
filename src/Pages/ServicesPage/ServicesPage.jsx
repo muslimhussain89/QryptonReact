@@ -12,53 +12,54 @@ import { Autoplay } from "swiper/modules";
 import "./ServicesPage.css";
 import { useAos } from "../../hooks/useAos";
 import BlurOnScroll from "../../NewComponents/BlurOnScroll";
+import Text from "../../Components/Text/Text";
 
 
 
-function Typewriter({ text, speed = 50 }) {
-  const [displayText, setDisplayText] = useState("");
-  const containerRef = useRef(null);
-  const lastScrollY = useRef(window.scrollY);
+// function Typewriter({ text, speed = 50 }) {
+//   const [displayText, setDisplayText] = useState("");
+//   const containerRef = useRef(null);
+//   const lastScrollY = useRef(window.scrollY);
 
-  useEffect(() => {
-    const element = containerRef.current;
-    if (!element) return;
+//   useEffect(() => {
+//     const element = containerRef.current;
+//     if (!element) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        const currentScrollY = window.scrollY;
-        const isScrollingDown = currentScrollY > lastScrollY.current;
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         const currentScrollY = window.scrollY;
+//         const isScrollingDown = currentScrollY > lastScrollY.current;
 
-        if (entry.isIntersecting && isScrollingDown) {
-          setDisplayText("");
+//         if (entry.isIntersecting && isScrollingDown) {
+//           setDisplayText("");
 
-          let current = 0;
+//           let current = 0;
 
-          const interval = setInterval(() => {
-            current++;
+//           const interval = setInterval(() => {
+//             current++;
 
-            setDisplayText(text.slice(0, current));
+//             setDisplayText(text.slice(0, current));
 
-            if (current >= text.length) {
-              clearInterval(interval);
-            }
-          }, speed);
-        }
+//             if (current >= text.length) {
+//               clearInterval(interval);
+//             }
+//           }, speed);
+//         }
 
-        lastScrollY.current = currentScrollY;
-      },
-      {
-        threshold: 0.25,
-      }
-    );
+//         lastScrollY.current = currentScrollY;
+//       },
+//       {
+//         threshold: 0.25,
+//       }
+//     );
 
-    observer.observe(element);
+//     observer.observe(element);
 
-    return () => observer.disconnect();
-  }, [text, speed]);
+//     return () => observer.disconnect();
+//   }, [text, speed]);
 
-  return <p ref={containerRef}>{displayText}</p>;
-}
+//   return <p ref={containerRef}>{displayText}</p>;
+// }
 
 export default function ServicesPage() {
   const services = [
@@ -442,8 +443,11 @@ export default function ServicesPage() {
               </BlurOnScroll>
               <div className="EachServiceBody">
                 <div className="ServicesDetails">
-                  <p>BENEFIT</p>
-                  <Typewriter text={items.Details} />
+                  <p >BENEFIT</p>
+                  <BlurOnScroll>
+                    <p className="">{items.Details}</p>
+                  </BlurOnScroll>
+                  {/* <Text text={items.Details} /> */}
                 </div>
                 <div className="WeProvide">
                   <div className="WeProvideNumber">

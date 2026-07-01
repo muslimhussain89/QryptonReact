@@ -49,7 +49,7 @@ export default function FaqAccordion() {
     <section className="md:w-[60%] px-4 py-10">
       <div className="space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-white rounded-[15px]"  data-aos="fade-up"
+          <div key={index} className="bg-[#00000005] rounded-[15px]"  data-aos="fade-up"
                 data-aos-delay={String(index * 100)}
           >
             <button

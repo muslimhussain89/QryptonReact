@@ -100,37 +100,37 @@ import { Autoplay } from "swiper/modules";
 export default function projects() {
   const projects = [
     
-    {
-      projectName: "TEKNUCLEI",
-      projectImage: "./Images/Teknuclei/teknucli.webp",
-      projectLink: "/teknuclei",
-      projectDate:"2026"
-    },
-    {
-      projectName: "AXION",
-      projectImage: "./Images/Axion/axion-1.webp",
-      projectLink: "/axion",
-      projectDate:"2025"
-    },
-    {
-      projectName: "CARMETRA",
-      projectImage: "./Images/Carmetra/carmetra-1.webp",
-      projectLink: "/carmetra",
-      projectDate:"2025"
+    // {
+    //   projectName: "TEKNUCLEI",
+    //   projectImage: "./Images/Teknuclei/teknucli.webp",
+    //   projectLink: "/teknuclei",
+    //   projectDate:"2026"
+    // },
+    // {
+    //   projectName: "AXION",
+    //   projectImage: "./Images/Axion/axion-1.webp",
+    //   projectLink: "/axion",
+    //   projectDate:"2025"
+    // },
+    // {
+    //   projectName: "CARMETRA",
+    //   projectImage: "./Images/Carmetra/carmetra-1.webp",
+    //   projectLink: "/carmetra",
+    //   projectDate:"2025"
 
-    },
+    // },
     {
       projectName: "PURE OIL",
       projectImage: "./Images/PureOil/pure-oil-1.webp",
       projectLink: "/pureoil",
       projectDate:"2024"
     },
-    {
-      projectName: "HAGAN LUBRICANTS",
-      videoSrc: "/Videos/HAGAN.mp4",
-      projectLink: "/haganlubricants",
-      projectDate:"2021"
-    },
+    // {
+    //   projectName: "HAGAN LUBRICANTS",
+    //   videoSrc: "/Videos/HAGAN.mp4",
+    //   projectLink: "/haganlubricants",
+    //   projectDate:"2021"
+    // },
     {
       projectName: "AL ALI",
       projectImage: "./Images/AlAliOils/AliAliSolution3.webp",
@@ -138,13 +138,13 @@ export default function projects() {
       projectDate:"2023"
 
     },
-    {
-      projectName: "PEPL",
-      projectImage: "./Images/pel/PelSolution3.webp",
-      projectLink: "/pel",
-      projectDate:"2020"
+    // {
+    //   projectName: "PEPL",
+    //   projectImage: "./Images/pel/PelSolution3.webp",
+    //   projectLink: "/pel",
+    //   projectDate:"2020"
 
-    },
+    // },
     {
       projectName: "RTX",
       projectImage: "./Images/Rtx/SolutionImage2.webp",
@@ -163,6 +163,22 @@ export default function projects() {
       videoSrc: "/Videos/LandingSateliteVideo.mp4",
       projectLink: "/dynasys",
       projectDate:"2023"
+    },
+    {
+      projectName: "AIOTICA",
+      videoSrc: "/Videos/aiotica-header-video.mp4",
+      projectLink: "/aiotica",
+      projectDate:"2026"
+    },
+    {
+      projectName: "Reflections Interior & Design",
+      projectImage: "./Images/Reflections/refletions-page-image-1.webp",
+      projectLink: "/reflections",
+      projectDate:"2026",
+      Bgcolor:"#d6d8d9",
+      ImgWidth:"88%"
+
+      
     }
     
   ];
@@ -207,6 +223,8 @@ export default function projects() {
               videoSrc={project.videoSrc}
               ProjectImage={project.projectImage}
               projectDate={project.projectDate}
+              Bgcolor={project.Bgcolor}
+              ImgWidth={project.ImgWidth}
             />
             
             </SwiperSlide>

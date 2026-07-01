@@ -1,7 +1,6 @@
 import CustomCursor from "../../Components/CustomCursor/CustomCursor";
 import "./Landing.css";
 import { Helmet } from "react-helmet";
-import ProjectSlider from "../../NewComponents/ProjectSlider";
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -10,45 +9,47 @@ import FaqAccordion from "../../NewComponents/FaqAccordion";
 import ContactUs from "../../Components/ContactUs/ContactUs";
 import { BiPlus } from "react-icons/bi";
 import BlurOnScroll from "../../NewComponents/BlurOnScroll";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-// import required modules
-import { Autoplay } from "swiper/modules";
 
 const ourwork = [
-  {
-    ProjectVideo: "./Videos/Factory Shoot_3_1.mp4",
-    ProjectVideoLogo: "./Images/tecneuclei-logo.svg",
-    ProjectDetail:
-      "TekNuclei, A Engineering firm providing excellence in automation, design, and fabrication solutions.",
-    ProjectLink: "/teknuclei",
-  },
   {
     ProjectVideo: "./Videos/HAGAN.mp4",
     ProjectDetail:
       "HAGAN, A pioneer lubricant brand, has had a profound impact on the global lubricant industry.",
+    ProjectIndustry: "startup",
+    ProjectName: "hagan lubricants",
     ProjectLink: "/haganlubricants",
+  },
+  {
+    ProjectImg: "./Images/OurWorkImages/AlAli.webp",
+    ProjectDetail:
+      "AL Ali, A promising brand that delivers high quality cooking oil.",
+    ProjectIndustry: "startup",
+    ProjectName: "al ali",
+    ProjectLink: "/alalioil",
   },
   {
     ProjectImg: "./Images/OurWorkImages/iPad Air Mockup.webp",
     ProjectDetail:
-      "PEL, A Pakistani Petroleum Exploration And Production Company With An International Presence.",
+      "PEL, A Pakistani Exploration And Production Company With An International Presence",
+    ProjectIndustry: "corporate",
+    ProjectName: "pel",
     ProjectLink: "/pel",
   },
   {
-    ProjectVideo: "./Videos/Axion.mp4",
+    ProjectImg: "./Images/OurWorkImages/RTX.webp",
     ProjectDetail:
-      "AXION delivers high quality lubricants for better performance.",
-    ProjectLink: "/axion",
+      "RTX is a brand of automotive and industrial lubricants offering a wide range of German formulated and locally blended oils, lubricants & greases.",
+    ProjectIndustry: "startup",
+    ProjectName: "rtx",
+    ProjectLink: "/rtxlubricants",
   },
   {
-    ProjectSliderImg1: "./Images/OurWorkImages/cartemta-project-image-1.webp",
-    ProjectSliderImg2: "./Images/OurWorkImages/cartemta-project-image-2.webp",
+    ProjectVideo: "./Videos/seekho.mp4",
     ProjectDetail:
-      "CARMETRA is a automotive solutions brand focused on premium accessories, services, and customized automotive experiences.",
-    ProjectLink: "/carmetra",
+      "Seekho is an award-winning Driver's Education Program in Karachi, that has trained over 1000 students since 2019.",
+    ProjectIndustry: "startup",
+    ProjectName: "seekho",
+    ProjectLink: "/seekho",
   },
 ];
 
@@ -164,19 +165,10 @@ export default function Landing({ handleContactToggle }) {
                     className="custom-cursor-target"
                   >
                     {project.ProjectVideo ? (
-                      <div className="ProjectVideo relative">
+                      <div className="ProjectVideo">
                         <video autoPlay muted loop preload="auto">
                           <source src={project.ProjectVideo} type="video/mp4" />
                         </video>
-                        {project.ProjectVideoLogo && (
-                          <div className="absolute inset-0 z-0 flex items-center justify-center  w-full h-full bg-[#00000094]">
-                            <img
-                              className="opacity-60"
-                              src={project.ProjectVideoLogo}
-                              alt=""
-                            />
-                          </div>
-                        )}
                       </div>
                     ) : (
                       ""
@@ -189,100 +181,26 @@ export default function Landing({ handleContactToggle }) {
                       ""
                     )}
 
-                    {/* FIX 1: Check for ProjectSliderImg1 instead */}
-                    {project.ProjectSliderImg1 && (
-                      <div className="ProjectSlider">
-                        <Swiper
-                          spaceBetween={10}
-                          slidesPerView={1}
-                          onSlideChange={() => console.log("slide change")}
-                          onSwiper={(swiper) => console.log(swiper)}
-                          centeredSlides={true}
-                          loop={true}
-                          autoplay={{
-                            delay: 3500,
-                            disableOnInteraction: false,
-                          }}
-                          modules={[Autoplay]}
-                        >
-                          {/* FIX 2: Removed the plain <div> wrapper so slides are direct children */}
-                          <SwiperSlide>
-                            <img src={project.ProjectSliderImg1} alt="" />
-                          </SwiperSlide>
-                          <SwiperSlide>
-                            <img src={project.ProjectSliderImg2} alt="" />
-                          </SwiperSlide>
-                        </Swiper>
-                      </div>
-                    )}
-
                     <div className="ProjectDetails">
-                      <h1
-                        className="animated"
-                        onMouseMove={(e) => {
-                          const rect = e.currentTarget.getBoundingClientRect();
-                          // Calculate precise cursor pixels relative ONLY to this h1 text frame
-                          const x = e.clientX - rect.left;
-                          const y = e.clientY - rect.top;
-
-                          e.currentTarget.style.setProperty("--x", `${x}px`);
-                          e.currentTarget.style.setProperty("--y", `${y}px`);
-                        }}
-                      >
-                        {project.ProjectDetail}
-                      </h1>
+                      <h1>{project.ProjectDetail}</h1>
                     </div>
-                    {/* <div className="ProjectName">
+                    <div className="ProjectName">
                       <p>
                         {project.ProjectIndustry}:
                         <span>{project.ProjectName}</span>
                       </p>
-                    </div> */}
+                    </div>
                   </a>
                 </motion.div>
               );
             })}
           </div>
 
-          {/* PROJECTS SECTIONS  */}
-          <div
-            id="projects"
-            className="max-w-[1500px] mx-auto md:mt-[150px] mt-50 md:mb-[150px] mb-50 "
-          >
-            <div className="flex max-lg:flex-col max-2xl:px-[4%]">
-              {/* <div className="w-[22%]">
-            <p className="md:text-[1.4rem] text-[1.8rem] font-[600] text-[#6e6e6e]">
-              (27)
-            </p>
-          </div> */}
-              <div className="w-[45%] flex flex-col gap-[22px] leading-[01] max-lg:my-[50px]">
-                <BlurOnScroll>
-                  <h2 className="text-[5.4rem]  font-bold  capitalize">
-                    more projects.
-                  </h2>
-                </BlurOnScroll>
-                {/* <p className="text-[2.5rem] font-[600]">©2026</p> */}
-              </div>
-              <div className="lg:w-[25%] sm:w-[80%] flex flex-col justify-center">
-                <BlurOnScroll>
-                  <p className="md:text-[1.4rem] text-[1.8rem]   font-[600] text-[#6e6e6e]">
-                    We’ve helped businesses across industries achieve their
-                    goals. Here are some of our recent projects.
-                  </p>
-                </BlurOnScroll>
-              </div>
-            </div>
-            <ProjectSlider />
-          </div>
-
           {/* PRICING SECTION  */}
           <PricingSection handleContactToggle={handleContactToggle} />
 
           {/* FAQS  */}
-          <div
-            id="faq"
-            className="max-w-[1500px] mx-auto md:mt-[150px] mt-[10rem] md:mb-[150px] mb-[10rem] max-2xl:px-[4%]"
-          >
+          <div className="max-w-[1500px] mx-auto md:mt-[150px] mt-[10rem] md:mb-[150px] mb-[10rem] max-2xl:px-[4%]">
             <div className="md:flex justify-between">
               <div className="flex flex-col gap-[22px] md:w-[50%]">
                 <div className="flex w-[22%] max-xl:mb-[0px]">
@@ -311,7 +229,7 @@ export default function Landing({ handleContactToggle }) {
                   </BlurOnScroll>
                 </div>
                 <BlurOnScroll>
-                  <p className="text-[#6e6e6e] md:text-[1.4rem] text-[1.8rem] font-semibold sm:w-[60%] w-[100%] max-md:my-[20px] ">
+                  <p className="text-[#6e6e6e] md:text-[1.4rem] text-[1.8rem] font-semibold w-[60%] max-md:my-[20px] ">
                     Got questions? We’ve got answers. Here’s <br></br>{" "}
                     everything you need to know about working with us.
                   </p>
@@ -322,7 +240,7 @@ export default function Landing({ handleContactToggle }) {
           </div>
 
           {/* LET'S TALK */}
-          <div id="talk" className="bg-[#00000005] md:py-[150px] pt-20 pb-20">
+          <div className="bg-[#00000005] md:py-[150px] pt-20 pb-20">
             <div className="max-w-[1500px] mx-auto max-2xl:px-[4%]">
               <div className="flex justify-between max-md:flex-col-reverse">
                 <div className=" md:w-[45%] max-md:mt-[80px] bg-white">

@@ -99,7 +99,7 @@
 
 
 
-.QryptonNavbarLinks {
+/* .QryptonNavbarLinks {
   --rgb: 0 0 0;
 }
 
@@ -118,7 +118,7 @@
   text-shadow:
     0 2ex rgb(var(--rgb) / 0.15),
     0 -2ex rgb(var(--rgb) / 0.15);
-}
+} */
 
 
 
@@ -132,9 +132,16 @@
         margin-right: 0rem;
     }
 
-    .QryptonNavbarLinks .QryptonButton {
-        margin: 0rem 0rem 0rem 2rem;
-    }
+    .QryptonNavbarLinks .QryptonButton, .QryptonNavbarLinks a {
+    margin: 0rem 0rem 0rem 1.5rem;
+}
+
+
+
+    .QryptonNavbarLinks button,
+.QryptonNavbarLinks a {
+    font-size: 1.4rem;
+}
 
 }
 

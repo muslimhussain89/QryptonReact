@@ -37,7 +37,7 @@ export default function Teknuclei() {
 
       <ProjectAbout
         AboutProject={
-          "<span>TekNuclei , </span>  based in Islamabad offers a comprehensive range of services for IoT Embedded systems & Metal fabrications."
+          "<span>TekNuclei, </span>  based in Islamabad offers a comprehensive range of services for IoT Embedded systems & Metal fabrications."
         }
         ProjectImg1={"./Images/Teknuclei/teknuclei-image-2.webp"}
         AboutProjectHead={"About Project"}

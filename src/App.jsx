@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 // import Navbar from "./NewComponents/Navbar";
 import Landing from "./Pages/Landing/Landing";
-// import Footer from "./Components/Footer/Footer";
-import Footer from "./NewComponents/Footer";
+import Footer from "./Components/Footer/Footer";
+// import Footer from "./NewComponents/Footer";
 import ServicesPage from "./Pages/ServicesPage/ServicesPage";
 import HaganLubricantsProject from "./Pages/HaganLubricantsProject/HaganLubricantsProject";
 import RtxLubricantsProject from "./Pages/RtxLubricantsProject/RtxLubricantsProject";
@@ -23,6 +23,9 @@ import Carmetra from "./Pages/Carmetra";
 import Pureoil from "./Pages/Pureoil";
 import Dynasys from "./Pages/Dynasys";
 import CustomCursor from "./NewComponents/CustomCursur";
+import { useAos } from "./hooks/useAos";
+import Reflection from "./Pages/Reflection/Reflection";
+import Aiotica from "./Pages/Aiotica/Aiotica";
 
 // Google Analytics tracking hook
 function usePageTracking() {
@@ -35,7 +38,7 @@ function usePageTracking() {
 }
 
 function App() {
-
+  useAos(); // Initialize AOS animations
 
   const [touchButtonClicked, setTouchButtonClicked] = useState(false);
   const [activeContact, setActiveContact] = useState(false);
@@ -59,8 +62,8 @@ function App() {
         activeContact={activeContact}
         isScrollDisabled={isScrollDisabled} />
       <Routes>
-        {/* <Route path="/" element={<Landing />} /> */}
-        <Route path="/" element={<LandingNew handleContactToggle={handleContactToggle} />} />
+        <Route path="/" element={<Landing />} />
+        {/* <Route path="/" element={<LandingNew handleContactToggle={handleContactToggle} />} /> */}
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/haganlubricants" element={<HaganLubricantsProject />} />
         <Route path="/rtxlubricants" element={<RtxLubricantsProject />} />
@@ -72,6 +75,8 @@ function App() {
         <Route path="/carmetra" element={<Carmetra />} />
         <Route path="/pureoil" element={<Pureoil />} />
         <Route path="/dynasys" element={<Dynasys />} />
+        <Route path="/reflections" element={<Reflection />} />
+        <Route path="/aiotica" element={<Aiotica />} />
       </Routes>
       <Footer />
     </BrowserRouter>

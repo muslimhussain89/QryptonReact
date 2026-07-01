@@ -122,11 +122,11 @@ export default function PricingSection({ handleContactToggle }) {
   ];
 
   return (
-    <div id="pricing" className="bg-black md:py-[150px] py-50">
+    <div id="pricing" className="bg-[#00000005] md:py-[150px] py-[10rem]">
       <div className="max-w-[1500px] mx-auto max-2xl:px-[4%]">
         <div className="flex max-lg:flex-col">
           <div className="flex w-[22%] max-xl:mb-[50px]">
-            <p className="capitalize flex text-[1.6rem] font-semibold text-white">
+            <p className="capitalize flex text-[1.6rem] font-semibold text-black">
               <BiPlus
                 size={25}
                 className="bg-white text-black mr-[15px] rounded-full"
@@ -137,7 +137,7 @@ export default function PricingSection({ handleContactToggle }) {
           <div>
             <div className="w-[55%] flex flex-col gap-[22px] leading-[01]">
               <BlurOnScroll>
-                <h2 className="2xl:text-[12.2rem] sm:text-[8rem] text-[6rem] font-semibold text-white capitalize">
+                <h2 className="text-[5.4rem]  font-bold text-black capitalize">
                   pricing
                 </h2>
               </BlurOnScroll>

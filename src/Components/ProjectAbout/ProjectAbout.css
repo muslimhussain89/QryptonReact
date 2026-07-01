@@ -1,7 +1,11 @@
+
 .ProjectAbout {
     margin-top: 8rem;
 }
-
+.ProjectAboutSectionParent .ProjectAbout 
+{
+     margin-top: 0rem;
+}
 .ProjectAboutHeadingText {
     width: 45%;
 }
@@ -54,6 +58,12 @@
     width: 15%;
 }
 
+/* .ProjectBioData div:hover
+{
+    background-color: #e7e7e7;
+    transition: all 0.3s;
+} */
+
 /*****************************************************
 ********************* MEDIA QUERIES *****************
 ********************************************************/
@@ -80,6 +90,11 @@
     .ProjectScope p:nth-child(2) {
         width: 22%;
     }
+    .ProjectAboutHeadingText {
+    width: 65%;
+}
+
+
 }
 
 /*****************************************************

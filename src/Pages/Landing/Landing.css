@@ -7,70 +7,71 @@
 
 /********************* FONT NAME *************************************/
 .titillium-web-extralight {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 200;
-  font-style: normal;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .titillium-web-light {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .titillium-web-regular {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .titillium-web-semibold {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .titillium-web-bold {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .titillium-web-black {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 900;
-  font-style: normal;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .titillium-web-extralight-italic {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 200;
-  font-style: italic;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: italic;
 }
 
 .titillium-web-light-italic {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: italic;
 }
 
 .titillium-web-regular-italic {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .titillium-web-semibold-italic {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 600;
-  font-style: italic;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: italic;
 }
 
 .titillium-web-bold-italic {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
+
 /* .ServicesPage p,a,.ServicesPage h1,h2,h3,button,input,textarea
 {
   font-family: "Titillium Web", sans-serif;
@@ -97,14 +98,14 @@
     width: 100%;
     height: 100%;
 }
-.QryptonLandingPage
-{
+
+.QryptonLandingPage {
     position: relative;
     z-index: 0;
 }
-.LandingSec2
-{
-    margin-top: max(30rem, 82vh);
+
+.LandingSec2 {
+    margin-top: max(30rem, 100vh);
     position: relative;
     z-index: 1;
     background-color: white;
@@ -205,6 +206,7 @@
     margin-bottom: 10rem;
 }
 
+
 .OurWorkSection .EachWork a {
     text-decoration: none;
     color: black;
@@ -243,8 +245,11 @@
 
 .OurWorkSection .EachWork:nth-child(1) .ProjectVideo {
     background-color: #e7e7e7;
-    height: 60vh;
     display: flex;
+}
+
+.OurWorkSection .EachWork:nth-child(1) .ProjectVideo img {
+    width: 30%;
 }
 
 .OurWorkSection .EachWork:nth-child(1) video {
@@ -301,35 +306,153 @@
 .OurWorkSection .EachWork:nth-child(5) {
     grid-column: 1 / -1;
     /* This item spans across all columns */
-    width: 90%;
+    width: 75%;
     /* 90% width */
     justify-self: center;
     /* Center align */
 }
 
-.OurWorkSection .EachWork:nth-child(5) video {
-    width: 100%;
+.OurWorkSection .EachWork:nth-child(5) .ProjectImage {
+    background: #e3e5ed;
+}
+
+.OurWorkSection .EachWork:nth-child(5) .ProjectVideo,
+.OurWorkSection .EachWork:nth-child(5) .ProjectVideo video {
+    height: 85vh;
+}
+
+.OurWorkSection .EachWork:nth-child(5) .ProjectVideo video {
+    object-fit: cover;
 }
 
 
+
+.OurWorkSection .EachWork:nth-child(5) .animated:hover,
+.OurWorkSection .EachWork:nth-child(4) .animated:hover,
+.OurWorkSection .EachWork:nth-child(3) .animated:hover,
+.OurWorkSection .EachWork:nth-child(2) .animated:hover,
+.OurWorkSection .EachWork:nth-child(1) .animated:hover {
+    text-decoration: none;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+}
+
+
+.OurWorkSection .EachWork:nth-child(1) .animated:hover {
+
+    background-image: radial-gradient(ellipse 120px 60px at var(--x, 0px) var(--y, 0px),
+            #f45100 0%,
+            #f45100 70%,
+            #000 100%);
+    will-change: background-image;
+}
+
+.OurWorkSection .EachWork:nth-child(3) .animated:hover {
+
+    background-image: radial-gradient(ellipse 120px 60px at var(--x, 0px) var(--y, 0px),
+            #fc0 0%,
+            #fc0 70%,
+            #000 100%);
+    will-change: background-image;
+}
+
+.OurWorkSection .EachWork:nth-child(4) .animated:hover {
+    background-image: radial-gradient(ellipse 120px 60px at var(--x, 0px) var(--y, 0px),
+            #4834d4 0%,
+            #4834d4 70%,
+            #000 100%);
+    will-change: background-image;
+
+}
+
+.OurWorkSection .EachWork:nth-child(5) .animated:hover {
+    background-image: radial-gradient(ellipse 120px 60px at var(--x, 0px) var(--y, 0px),
+            #f41c06 0%,
+            #f41c06 70%,
+            #000 100%);
+    will-change: background-image;
+
+}
+
+.animated {
+    color: #000;
+}
+
+/* Target specifically your second item on hover like your selector did */
+.OurWorkSection .EachWork:nth-child(2) .animated:hover {
+    text-decoration: none;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+
+    background-image: radial-gradient(ellipse 120px 60px at var(--x, 0px) var(--y, 0px),
+            #FF5858 0%,
+            #CC2E5D 70%,
+            #000 100%);
+    will-change: background-image;
+}
 
 
 /****************MEDIA QUERIES************************************
 *****************MEDIA QUERIES***********************************
 *****************MEDIA QUERIES***********************************/
 
+
+/****************************************************
+************** MEDIA QUERY 1200 *********************
+******************************************************/
+
+@media (max-width: 1440px) {
+    .OurWorkSection .EachWork:nth-child(1) .ProjectVideo img {
+        width: 35%;
+    }
+}
+
 /****************************************************
 ************** MEDIA QUERY 1200 *********************
 ******************************************************/
 
 @media (max-width: 1200px) {
-    .HeaderVideo {
+    /* .HeaderVideo {
         height: 88vh;
     }
+
     .LandingSec2 {
         margin-top: 78vh;
+    } */
+
+    .digitalProductInner .digitalProductSec:nth-child(2) h1,
+    .digitalProductInner .digitalProductSec:nth-child(3) h2,
+    .OurWorkSection .EachWork .ProjectDetails h1,
+    .ServicesPageHero h1,
+    .EachService h2 {
+        font-size: 3rem !important;
     }
-    
+
+    #projects h2,
+    #pricing h2,
+    #faq h2,
+    #talk h2 {
+        font-size: 3.4rem;
+    }
+
+    .OurWorkSection .EachWork:nth-child(5) .ProjectVideo,
+    .OurWorkSection .EachWork:nth-child(5) .ProjectVideo video {
+        height: auto;
+    }
+
+    .OurWorkSection .EachWork:nth-child(5) {
+        width: 90%;
+    }
+
+    .OurWorkSection .EachWork:nth-child(1) .ProjectVideo img {
+        width: 35%;
+    }
+
+
 }
 
 /****************************************************
@@ -338,13 +461,39 @@
 
 @media (max-width: 768px) {
     .HeaderVideo {
-        height: 68vh;
+        height: 75vh;
     }
+
     .LandingSec2 {
-        margin-top: 48vh;
+        margin-top: 75vh;
     }
+
     .OurWorkSection .EachWork:nth-child(2) img {
         width: 100%;
+    }
+
+    .OurWorkSection .EachWork:nth-child(1) .ProjectDetails,
+    .OurWorkSection .EachWork:nth-child(1) .ProjectName,
+    .OurWorkSection .EachWork:nth-child(4) .ProjectDetails,
+    .OurWorkSection .EachWork:nth-child(4) .ProjectName {
+        margin-left: 2rem;
+    }
+
+    .OurWorkSection .EachWork .ProjectDetails h1 {
+        font-size: 3rem !important;
+    }
+
+    .OurWorkSection .EachWork .ProjectName {
+        font-size: 2rem;
+    }
+
+    .OurWorkSection .EachWork:nth-child(5) {
+        margin-bottom: 0rem;
+    }
+
+    .OurWorkSection .EachWork:nth-child(1) .ProjectVideo img {
+        width: 40%;
+        opacity: 50%;
     }
 }
 
@@ -375,9 +524,11 @@
         position: relative;
         margin-top: 25px;
     }
+
     .LandingSec2 {
         margin-top: 0vh;
     }
+
     /********************* DIGITAL PRODUCT ****************************/
     .DigitalProductPorfpolio .digitalProductInner {
         grid-template-columns: auto;
@@ -397,7 +548,7 @@
 
     .OurWorkSection .EachWork:nth-child(2) .ProjectDetails,
     .OurWorkSection .EachWork:nth-child(2) .ProjectName {
-        margin-left: 6rem;
+        margin-left: 2rem;
 
     }
 
@@ -414,6 +565,10 @@
 
     .OurWorkSection .EachWork .ProjectDetails {
         width: 90%;
+    }
+
+    .digitalProductInner .digitalProductSec:nth-child(2) p {
+        width: 100%;
     }
 
 }

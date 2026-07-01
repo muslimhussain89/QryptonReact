@@ -3,15 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.8%;
-    background-color: #e3e5ed;
+    padding: 1% 1.8%;
+    /* background-color: #e3e5ed; */
+    background-color: white;
 
     position: relative;
     z-index: 1;
 }
 .QryptonFooter .QryptonLogo a
 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-decoration: none;
     color: black;
     text-transform: capitalize;

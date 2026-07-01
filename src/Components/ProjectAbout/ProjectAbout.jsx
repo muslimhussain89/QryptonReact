@@ -19,7 +19,7 @@ export default function ProjectAbout({
 }) {
   return (
     <div className="ProjectAbout">
-      <div className="ProjectAboutHeadingText">
+      <div className="ProjectAboutHeadingText" data-aos="fade-up">
         <Text text={AboutProject} FontSize={"4rem"} />
       </div>
       <div className="ProjectAboutImages">

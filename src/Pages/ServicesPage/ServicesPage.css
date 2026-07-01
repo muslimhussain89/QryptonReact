@@ -46,6 +46,7 @@
 .ServicesName a {
     padding-top: 2rem;
 }
+
 .ServicesName a:nth-child(1),
 .ServicesName a:nth-child(5) {
     border-top: 1px solid black;
@@ -60,12 +61,13 @@
     padding-bottom: 2rem;
     font-weight: 600;
 }
-.ServicesName a:hover,
+
+/* .ServicesName a:hover,
 .WeProvideNumber p:hover
 {
     background-color: #e5e4e4;
 
-}
+} */
 .ServiceName svg {
     width: 20px;
     height: 20px;
@@ -75,20 +77,25 @@
     stroke: black;
 }
 
+.ServicesDetails p:nth-child(2) {
+    width: 65%;
+    font-size: 3.5rem;
+    font-weight: 600;
+
+}
+
 /*************************************************
 ******************** EACH SERVICES **************
 ****************************************************/
-.EachService {
-    margin: 5rem 0rem;
-}
+
 
 .EachService h2 {
     font-size: 7.5rem;
-    padding-top: 2.5rem;
+    padding-top: 7rem;
     margin: 0 !important;
     border-top: 1px solid black;
     font-weight: 600;
-    background-color: #e7e7e7;
+    /* background-color: #e7e7e7; */
     padding-left: 15px;
 }
 
@@ -103,6 +110,7 @@
     margin-bottom: 4rem;
     border-bottom: none;
 }
+
 .WeProvideNumber p:nth-child(1):hover {
     background-color: transparent;
 }
@@ -116,11 +124,7 @@
     width: 50%;
 }
 
-.ServicesDetails p:nth-child(2) {
-    width: 65%;
-    font-weight: 700;
-    font-size: 3.5rem;
-}
+
 
 .WeProvideNumber p {
     font-size: 2.2rem;
@@ -149,7 +153,6 @@
 .WeProvidedImages .swiper {
     margin-top: 10rem;
     margin-bottom: 10rem;
-    height: 95vh;
 }
 
 .ProjectSolution .swiper-slide img,
@@ -214,8 +217,8 @@
 
 
 /****************MEDIA QUERIES************************************
-*****************MEDIA QUERIES***********************************
 *****************MEDIA QUERIES***********************************/
+
 
 /****************************************************
 ************** MEDIA QUERY 1440 *********************
@@ -225,6 +228,18 @@
     .ServicesPageHero h1 {
         font-size: 6rem;
         width: 60%;
+    }
+}
+
+/****************************************************
+************** MEDIA QUERY 1200 *********************
+******************************************************/
+
+@media (max-width: 1200px) {
+    .ServicesDetails p:nth-child(2) {
+        width: 70% ;
+        font-size: 3rem !important;
+
     }
 }
 
@@ -282,13 +297,11 @@
 
     .ServicesName a:nth-child(5) {
         border-top: none;
-        padding-top: 0 !important;
+        /* padding-top: 0 !important; */
     }
 
     .EachService h2 {
         font-size: 4rem;
-        padding-top: 10rem;
-
     }
 
     .ServicesDetails {
@@ -310,7 +323,8 @@
 
 
     .EachService h2 {
-        padding-top: 6rem;
+        padding-top: 4.5rem;
+        padding-left: 0px;
     }
 
     .EachServiceBody {
@@ -323,6 +337,6 @@
     }
 
     .EachService {
-        margin: 7.5rem 0rem;
+        margin: 0ch 0rem;
     }
 }

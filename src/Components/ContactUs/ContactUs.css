@@ -62,14 +62,13 @@ select {
 }
 .landingbookmeeting 
 {
-    background-color: white;
+    background-color: black;
     white-space: nowrap;
-    color: black;
+    color: white;
     transition: width 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) !important;
 }
 .landingbookmeeting a
 {
-    color: black;
     text-decoration: none;
     font-size: 2rem;
     width: 100%;
@@ -235,7 +234,7 @@ input[type=number] {
     }
     .contactForm form .submit.meeting-btn
     {
-        margin-left: 10px !important;
+        margin-left: 0px !important;
     }
     .contactForm form .submit.meeting-btn a
     {
