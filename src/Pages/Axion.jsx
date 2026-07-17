@@ -5,6 +5,8 @@ import ProjectTwoColumnWrapper from "../Components/ProjectTwoColumnWrapper/Proje
 import ImageComp from "../Components/ImageComp/ImageComp";
 import OurSolutionSection from "../Components/OurSolutionSection/OurSolutionSection";
 import SeoHelmet from "../Components/SeoHelmet/SeoHelmet";
+import MoreProjectHeading from "../Components/MoreProjectHeading/MoreProjectHeading";
+import MoreProjectsSlider from "../NewComponents/ProjectSlider";
 
 export default function Axion() {
   return (
@@ -88,6 +90,14 @@ export default function Axion() {
         SolutionImage4={"./Images/Axion/Axion-page-image-7.webp"}
       />
       
+
+      {/* PROJECTS SECTIONS  */}
+                  <div id="projects">
+                    <MoreProjectHeading />
+                    <MoreProjectsSlider excludeLinks={["/axion"]} />
+                  </div>
+
+
     </div>
   );
 }

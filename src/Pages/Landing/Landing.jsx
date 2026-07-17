@@ -16,6 +16,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // import required modules
 import { Autoplay } from "swiper/modules";
+import MoreProjectsSlider from "../../NewComponents/ProjectSlider";
 
 const ourwork = [
   {
@@ -197,7 +198,7 @@ export default function Landing({ handleContactToggle }) {
                           slidesPerView={1}
                           onSlideChange={() => console.log("slide change")}
                           onSwiper={(swiper) => console.log(swiper)}
-                          centeredSlides={true}
+                          // centeredSlides={true}
                           loop={true}
                           autoplay={{
                             delay: 3500,
@@ -272,7 +273,15 @@ export default function Landing({ handleContactToggle }) {
                 </BlurOnScroll>
               </div>
             </div>
-            <ProjectSlider />
+            <MoreProjectsSlider
+              excludeLinks={[
+                "/teknuclei",
+                "/haganlubricants",
+                "/pel",
+                "/axion",
+                "/carmetra",
+              ]}
+            />
           </div>
 
           {/* PRICING SECTION  */}

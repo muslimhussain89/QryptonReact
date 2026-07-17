@@ -4,6 +4,8 @@ import ProjectTwoColumnWrapper from "../../Components/ProjectTwoColumnWrapper/Pr
 import ImageComp from "../../Components/ImageComp/ImageComp";
 import OurSolutionSection from "../../Components/OurSolutionSection/OurSolutionSection";
 import SeoHelmet from "../../Components/SeoHelmet/SeoHelmet";
+import MoreProjectHeading from "../../Components/MoreProjectHeading/MoreProjectHeading";
+import MoreProjectsSlider from "../../NewComponents/ProjectSlider";
 
 export default function RtxLubricantsProject() {
   return (
@@ -17,7 +19,9 @@ export default function RtxLubricantsProject() {
         imageAlt="RTX Lubes project by Qrypton"
       />
       <ProjectHeroSection
-        TextDetail={"<span>RTX, </span> brand of automotive <br> and industrial lubricants"}
+        TextDetail={
+          "<span>RTX, </span> brand of automotive <br> and industrial lubricants"
+        }
         Tab1={"branding"}
         Tab2={"UI/UX"}
         Tab3={"Product Design"}
@@ -81,10 +85,13 @@ export default function RtxLubricantsProject() {
         }
         SolutionImage4={"./Images/Rtx/SolutionImage4.webp"}
       />
-      <ImageComp
-        Src={"./Images/Rtx/SolutionImage5.webp"}
-        Width={"100%"}
-      />
+      <ImageComp Src={"./Images/Rtx/SolutionImage5.webp"} Width={"100%"} />
+
+      {/* PROJECTS SECTIONS  */}
+      <div id="projects" >
+        <MoreProjectHeading />
+        <MoreProjectsSlider excludeLinks={["/rtxlubricants"]} />
+      </div>
     </div>
   );
 }

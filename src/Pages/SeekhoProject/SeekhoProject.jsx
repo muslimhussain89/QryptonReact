@@ -6,6 +6,8 @@ import ImageComp from "../../Components/ImageComp/ImageComp";
 import ProjectSolution from "../../Components/ProjectSolution/ProjectSolution";
 import OurSolutionSection from "../../Components/OurSolutionSection/OurSolutionSection";
 import SeoHelmet from "../../Components/SeoHelmet/SeoHelmet";
+import MoreProjectHeading from "../../Components/MoreProjectHeading/MoreProjectHeading";
+import MoreProjectsSlider from "../../NewComponents/ProjectSlider";
 
 export default function SeekhoProject() {
   return (
@@ -19,7 +21,9 @@ export default function SeekhoProject() {
         imageAlt="Seekho project by Qrypton"
       />
       <ProjectHeroSection
-        TextDetail={"<span>SEEKHO,</span>A world-renowned leader in the driver education and training "}
+        TextDetail={
+          "<span>SEEKHO,</span>A world-renowned leader in the driver education and training "
+        }
         Tab1={"branding"}
         Tab2={"UI/UX"}
         Tab3={"Product Design"}
@@ -83,10 +87,13 @@ export default function SeekhoProject() {
         }
         SolutionImage4={"./Images/Seekho/SeekhoSolution4.webp"}
       />
-      <ImageComp
-        Src={"./Images/Seekho/SeekhoSolution5.webp"}
-        Width={"100%"}
-      />
+      <ImageComp Margin={"0rem 0rem 8rem 0rem"} Src={"./Images/Seekho/SeekhoSolution5.webp"} Width={"100%"} />
+
+      {/* PROJECTS SECTIONS  */}
+      <div id="projects" >
+        <MoreProjectHeading />
+        <MoreProjectsSlider excludeLinks={["/seekho"]} />
+      </div>
     </div>
   );
 }

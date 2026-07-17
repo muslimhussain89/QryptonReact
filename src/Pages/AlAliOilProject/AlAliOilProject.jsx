@@ -6,20 +6,24 @@ import ImageComp from "../../Components/ImageComp/ImageComp";
 import ProjectSolution from "../../Components/ProjectSolution/ProjectSolution";
 import OurSolutionSection from "../../Components/OurSolutionSection/OurSolutionSection";
 import SeoHelmet from "../../Components/SeoHelmet/SeoHelmet";
+import MoreProjectHeading from "../../Components/MoreProjectHeading/MoreProjectHeading";
+import MoreProjectsSlider from "../../NewComponents/ProjectSlider";
 
 export default function AlAliOilProject() {
   return (
     <div className="ProjectPage">
       <SeoHelmet
-          title="Al-Ali Project | Qrypton"
-          description="Qrypton undertook a comprehensive branding and product design initiative for Al-Ali, establishing a distinct brand identity and creating visually appealing product designs that align with their premium standards"
+        title="Al-Ali Project | Qrypton"
+        description="Qrypton undertook a comprehensive branding and product design initiative for Al-Ali, establishing a distinct brand identity and creating visually appealing product designs that align with their premium standards"
         path="/alalioil"
         image="/Images/AlAliOils/AliAliWeb.webp"
         type="website"
         imageAlt="Al-Ali project by Qrypton"
       />
       <ProjectHeroSection
-        TextDetail={"<span>AL ALI,</span> A trusted choice of quality, healthy and sustainability in cooking oil"}
+        TextDetail={
+          "<span>AL ALI,</span> A trusted choice of quality, healthy and sustainability in cooking oil"
+        }
         Tab1={"branding"}
         Tab2={"UI/UX"}
         Tab3={"Product Design"}
@@ -83,6 +87,12 @@ export default function AlAliOilProject() {
         }
         SolutionImage4={"./Images/AlAliOils/AliAliSolution4.webp"}
       />
+
+      {/* PROJECTS SECTIONS  */}
+      <div id="projects" >
+        <MoreProjectHeading />
+        <MoreProjectsSlider excludeLinks={["/alalioil"]} />
+      </div>
     </div>
   );
 }

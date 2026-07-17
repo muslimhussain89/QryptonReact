@@ -10,6 +10,7 @@
 
 
 @media screen and (min-width: 1950px) {
+
     .ProjectPage,
     .ServicesPage {
         padding: 2% 8%;
@@ -57,9 +58,10 @@
     .ProjectAboutImages img {
         width: 100%;
     }
+
     .ProjectHeroSectionText p {
-    width: 85%;
-}
+        width: 85%;
+    }
 }
 
 
@@ -70,9 +72,36 @@
     .ProjectHeroSectionTabs p {
         padding: 2rem 2rem;
     }
-    .ProjectHeroSectionText p
-    {
+
+    .ProjectHeroSectionText p {
         font-size: 5.5rem !important;
+    }
+
+    .ProjectHeroSectionText p,
+    .ProjectAboutHeadingText,
+    .ProjectTextCol2,
+    .SolutionHead,
+    .SolutionItem p {
+        width: 95% !important;
+    }
+
+    .ProjectTwoColumnWrapper,
+    .SolutionDetails {
+        flex-direction: column;
+    }
+
+    .ProjectTextCol2,
+    .SolutionHead p:nth-child(2),
+    .Head-Text div p:nth-child(2)   {
+        margin-top: 3rem;
+    }
+
+    .SolutionDetails {
+        margin-top: 8rem;
+    }
+    .Head-Text
+    {
+        margin:8rem 0rem;
     }
 }
 
@@ -81,52 +110,35 @@
 ********************* 576 *****************
 ********************************************************/
 @media screen and (max-width: 576px) {
-    .ProjectHeroSectionText p,
-    .ProjectAboutHeadingText,
-    .ProjectTextCol2,
-    .SolutionHead,
-    .SolutionItem p {
-        width: 95% !important;
-    }
-    .ProjectTwoColumnWrapper
-    {
-        flex-direction: column;
-    }
-    .ProjectTextCol2
-    {
-        margin-top: 5rem;
-    }
-    .SolutionDetails
-    {
-        margin-top: 8rem;
-        flex-direction: column;
-    }
-    .SolutionCol2, .SolutionCol1
-    {
+
+
+
+    .SolutionCol2,
+    .SolutionCol1 {
         width: 100% !important;
     }
-    .SolutionItem p
-    {
+
+    .SolutionItem p {
         margin: 10rem 0rem !important;
     }
-    
-    .ProjectHeadCol1 {
-    width: 50% !important;
-}
-.ProjectAboutHeadingText p
-{
-    font-size: 3rem !important;
-}
-.ProjectTextCol2 p,
-.SolutionHead p:nth-child(2),
-.SolutionItem p
-{
-    font-size: 2.2rem !important;
-}
-.ProjectHeroSectionTabs p
-{
-    font-size: 2rem !important;
-}
 
-    
+    .ProjectHeadCol1 {
+        width: 50% !important;
+    }
+
+    .ProjectAboutHeadingText p {
+        font-size: 3rem !important;
+    }
+
+    .ProjectTextCol2 p,
+    .SolutionHead p:nth-child(2),
+    .SolutionItem p {
+        font-size: 2.2rem !important;
+    }
+
+    .ProjectHeroSectionTabs p {
+        font-size: 2rem !important;
+    }
+
+
 }

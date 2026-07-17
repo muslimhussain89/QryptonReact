@@ -5,6 +5,9 @@ import ProjectTwoColumnWrapper from "../../Components/ProjectTwoColumnWrapper/Pr
 import ImageComp from "../../Components/ImageComp/ImageComp";
 import OurSolutionSection from "../../Components/OurSolutionSection/OurSolutionSection";
 import SeoHelmet from "../../Components/SeoHelmet/SeoHelmet";
+import MoreProjectsSlider from "../../NewComponents/ProjectSlider";
+import BlurOnScroll from "../../NewComponents/BlurOnScroll";
+import MoreProjectHeading from "../../Components/MoreProjectHeading/MoreProjectHeading";
 
 export default function Aiotica() {
   return (
@@ -23,9 +26,7 @@ export default function Aiotica() {
         }
         Tab1={"branding"}
         Tab2={"UI/UX"}
-        Tab3={"Product Design"}
-        Tab4={"Social MediaMarketing"}
-        Tab5={"Development"}
+        Tab3={"Development"}
       />
 
       {/* PROJECT VIDEO */}
@@ -40,14 +41,15 @@ export default function Aiotica() {
           "<span>AIOTICA</span> platform helps manufacturers, logistics operators, and food & beverage producers predict disruptions, prevent inefficiencies, and drive sustainable growth through real-time data and AI-driven insights."
         }
         ProjectImg1={"./Images/Aiotica/aiotica-page-image-1.webp"}
+        ImageWidth={"100%"}
         AboutProjectHead={"About Project"}
         AboutProjectDetails={
           " Qrypton was brought in to design and develop a website that could communicate complex Industrial IoT technology in plain language, build trust with enterprise decision-makers, and convert site visits into consultation bookings — all while positioning AIOTICA as the GTA's leading IIoT partner."
         }
         ProjectFounded={"Founded:"}
-        ProjectFoundedDate={"2026"}
+        ProjectFoundedDate={"2025"}
         ProjectIndustry={"Industry"}
-        ProjectIndustryName={"Engineering Solutions"}
+        ProjectIndustryName={"IT solutions"}
         ProjectScope={"Scope of Work"}
         ProjectScopeName={"Brand Dev"}
       />
@@ -83,7 +85,7 @@ export default function Aiotica() {
         // }
         SolutionImage3={"./Images/Aiotica/aiotica-page-image-4.webp"}
         Solution3={
-          "<span>Brand Identity & Design:  </span> Developed a clean, professional visual identity with branding elements that align with TekNuclei’s innovative engineering focus."
+          "<span>Brand Identity & Design:  </span> AIOTICA's visual identity was built around their core proposition: Predict. Prevent. Prosper. — a clean, confident three-word framework that anchors everything. The design language leans into precision and intelligence: deep blues, sharp typography, and data-forward layouts that signal expertise without alienating a non-technical viewer."
         }
         // SolutionImage4={"./Images/Teknuclei/teknuclei-image-6.webp"}
       />
@@ -91,6 +93,12 @@ export default function Aiotica() {
         Src={"./Images/Teknuclei/teknuclei-image-7.webp"}
         Width={"100%"}
       /> */}
+
+      {/* PROJECTS SECTIONS  */}
+      <div id="projects" >
+        <MoreProjectHeading />
+        <MoreProjectsSlider excludeLinks={["/aiotica"]} />
+      </div>
     </div>
   );
 }

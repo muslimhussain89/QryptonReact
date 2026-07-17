@@ -11,7 +11,7 @@ export default function ProjectCards({ ProjectName, ProjectImage, videoSrc, proj
            rounded-[18px] bg-white overflow-hidden"
         >
         {
-          ProjectImage && (<img style={{ width: ImgWidth || 'auto' }}
+          ProjectImage && (<img style={{ width: ImgWidth || '100%' }}
             src={ProjectImage}
             alt="project-image"
             className="rounded-[18px] group-hover:blur-[2px] transition-all duration-200 group-hover:scale-[1.1] w-full "

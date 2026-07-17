@@ -5,6 +5,8 @@ import ProjectTwoColumnWrapper from "../Components/ProjectTwoColumnWrapper/Proje
 import ImageComp from "../Components/ImageComp/ImageComp";
 import OurSolutionSection from "../Components/OurSolutionSection/OurSolutionSection";
 import SeoHelmet from "../Components/SeoHelmet/SeoHelmet";
+import MoreProjectHeading from "../Components/MoreProjectHeading/MoreProjectHeading";
+import MoreProjectsSlider from "../NewComponents/ProjectSlider";
 
 export default function Pureoil() {
   return (
@@ -87,6 +89,12 @@ export default function Pureoil() {
         }
         SolutionImage4={"./Images/PureOil/pure-oil-page-image-6.webp"}
       />
+
+      {/* PROJECTS SECTIONS  */}
+      <div id="projects" >
+        <MoreProjectHeading />
+        <MoreProjectsSlider excludeLinks={["/pureoil"]} />
+      </div>
     </div>
   );
 }

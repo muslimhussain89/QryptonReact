@@ -1,23 +1,26 @@
-.SolutionHead
-{
+.SolutionHead {
     width: 50%;
 }
-.SolutionDetails
-{
+
+.SolutionDetails {
     display: flex;
     justify-content: space-between;
 }
+
 .SolutionCol2,
-.SolutionCol1
-{
+.SolutionCol1 {
     width: 48%;
 }
-.OurSolutionSection
-{
+
+.OurSolutionSection {
     margin-bottom: 8rem;
 }
-.SolutionItem p span
-{
+
+.SolutionItem p span {
     font-weight: 600;
     margin-right: 10px;
+}
+
+.ProjectSlider .swiper-wrapper img {
+    margin: 0 auto;
 }

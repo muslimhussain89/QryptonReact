@@ -6,6 +6,8 @@ import ProjectTwoColumnWrapper from "../../Components/ProjectTwoColumnWrapper/Pr
 import ImageComp from "../../Components/ImageComp/ImageComp";
 import OurSolutionSection from "../../Components/OurSolutionSection/OurSolutionSection";
 import SeoHelmet from "../../Components/SeoHelmet/SeoHelmet";
+import MoreProjectHeading from "../../Components/MoreProjectHeading/MoreProjectHeading";
+import MoreProjectsSlider from "../../NewComponents/ProjectSlider";
 
 export default function HaganLubricantsProject() {
   return (
@@ -87,6 +89,12 @@ export default function HaganLubricantsProject() {
         Src={"./Images/HaganLubricants/haganWebsite.webp"}
         Width={"100%"}
       />
+
+       {/* PROJECTS SECTIONS  */}
+            <div id="projects" >
+              <MoreProjectHeading />
+              <MoreProjectsSlider excludeLinks={["/haganlubricants"]} />
+            </div>
     </div>
   );
 }

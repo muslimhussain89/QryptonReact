@@ -4,6 +4,8 @@ import ProjectTwoColumnWrapper from "../../Components/ProjectTwoColumnWrapper/Pr
 import ImageComp from "../../Components/ImageComp/ImageComp";
 import OurSolutionSection from "../../Components/OurSolutionSection/OurSolutionSection";
 import SeoHelmet from "../../Components/SeoHelmet/SeoHelmet";
+import MoreProjectHeading from "../../Components/MoreProjectHeading/MoreProjectHeading";
+import MoreProjectsSlider from "../../NewComponents/ProjectSlider";
 
 export default function PeplProject() {
   return (
@@ -17,7 +19,9 @@ export default function PeplProject() {
         imageAlt="PEL project by Qrypton"
       />
       <ProjectHeroSection
-        TextDetail={"<span>PEL,</span>   A subsidiary of the Shahzad International Group of Companies"}
+        TextDetail={
+          "<span>PEL,</span>   A subsidiary of the Shahzad International Group of Companies"
+        }
         Tab1={"branding"}
         Tab2={"UI/UX"}
         Tab3={"Product Design"}
@@ -82,10 +86,13 @@ export default function PeplProject() {
         }
         SolutionImage4={"./Images/pel/PelSolution4.webp"}
       />
-      <ImageComp
-        Src={"./Images/pel/PelSolution5.webp"}
-        Width={"100%"}
-      />
+      <ImageComp Src={"./Images/pel/PelSolution5.webp"} Width={"100%"} />
+
+      {/* PROJECTS SECTIONS  */}
+      <div id="projects" >
+        <MoreProjectHeading />
+        <MoreProjectsSlider excludeLinks={["/pel"]} />
+      </div>
     </div>
   );
 }

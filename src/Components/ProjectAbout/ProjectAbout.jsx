@@ -15,16 +15,32 @@ export default function ProjectAbout({
   ProjectIndustryName,
   ProjectScope,
   ProjectScopeName,
-  ImageWidth
+  ImageWidth,
+  ProjectTopImage,
+  TopImageWidth
 }) {
   return (
     <div className="ProjectAbout">
+
+    {
+      ProjectTopImage && (
+        <div className="ProjectAboutImages">
+          <ImageComp Src={ProjectTopImage} Width={TopImageWidth}  />
+        </div>
+      )
+    }
+
       <div className="ProjectAboutHeadingText" data-aos="fade-up">
         <Text text={AboutProject} FontSize={"4rem"} />
       </div>
-      <div className="ProjectAboutImages">
-        <ImageComp Src={ProjectImg1} Margin={"0px -4rem 8px"} Width={ImageWidth} />
+      {
+        ProjectImg1 && (
+          <div className="ProjectAboutImages">
+        <ImageComp Src={ProjectImg1}  Width={ImageWidth} />
       </div>
+        )
+      }
+      
       <ProjectTwoColumnWrapper TextCol1={AboutProjectHead} TextCol2={AboutProjectDetails} />
 
       <div className="ProjectBioData">

@@ -5,6 +5,8 @@ import ProjectTwoColumnWrapper from "../Components/ProjectTwoColumnWrapper/Proje
 import ImageComp from "../Components/ImageComp/ImageComp";
 import OurSolutionSection from "../Components/OurSolutionSection/OurSolutionSection";
 import SeoHelmet from "../Components/SeoHelmet/SeoHelmet";
+import MoreProjectHeading from "../Components/MoreProjectHeading/MoreProjectHeading";
+import MoreProjectsSlider from "../NewComponents/ProjectSlider";
 
 export default function Dynasys() {
   return (
@@ -81,13 +83,19 @@ export default function Dynasys() {
         Solution2={
           "<span>Social Media:</span>   Created engaging visuals and informative content to increase brand awareness, audience engagement, and industry credibility."
         }
-        SolutionImage3={"./Images/Axion/Axion-page-image-5.webp"}
+        SolutionImage3={"./Images/Dynasys/Dynasys-page-image-5.webp"}
         Solution3={
           "<span>Website Development: </span> Developed a responsive and high-performance website designed to showcase DynaSys’ services, solutions, and projects. The site structure allows visitors to easily navigate through complex technical offerings and understand their practical applications."
         }
-        SolutionImage4={"./Images/Axion/Axion-page-image-7.webp"}
+        SolutionImage4={"./Images/Dynasys/Dynasys-page-image-6.webp"}
       />
       
+      {/* PROJECTS SECTIONS  */}
+            <div id="projects" >
+              <MoreProjectHeading />
+              <MoreProjectsSlider excludeLinks={["/dynasys"]} />
+            </div>
+
     </div>
   );
 }

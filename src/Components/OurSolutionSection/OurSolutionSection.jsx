@@ -32,12 +32,12 @@ export default function OurSolutionSection({
         <div className="SolutionCol1">
           <div className="SolutionItem">
             <ImageComp Src={SolutionImage1} Width={"100%"} />
-            <Text Margin={"5rem 0rem"} text={Solution1} FontSize={"2.8rem"} />
+            <Text Margin={"5rem 0rem 8rem 0rem"} text={Solution1} FontSize={"2.8rem"} />
           </div>
           {SolutionImage2 && (
             <div className="SolutionItem">
               <ImageComp Src={SolutionImage2} Width={"100%"} />
-              <Text Margin={"5rem 0rem"} text={Solution2} FontSize={"2.8rem"} />
+              <Text Margin={"5rem 0rem 0rem 0rem"} text={Solution2} FontSize={"2.8rem"} />
             </div>
           )}
         </div>
@@ -45,7 +45,7 @@ export default function OurSolutionSection({
           <div className="SolutionCol2">
             <div className="SolutionItem">
               <ImageComp Src={SolutionImage3} Width={"100%"} />
-              <Text Margin={"5rem 0rem"} text={Solution3} FontSize={"2.8rem"} />
+              <Text Margin={"5rem 0rem 8rem 0rem"} text={Solution3} FontSize={"2.8rem"} />
             </div>
             {
               SolutionImage4 && <div className="SolutionItem">
